@@ -1,0 +1,48 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".TrackBusActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/mapFragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+    <LinearLayout
+        android:id="@+id/checkBoxLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:padding="6dp">
+
+        <!-- Contenido del LinearLayout -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="#FFFFFF"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp">
+
+            <Switch
+                android:id="@+id/switchOnlineOffline"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:fontFamily="@font/robotoblack"
+                android:text="COMPARTIR UBICACIÓN"
+                android:textColor="@color/Verde"
+                android:checked="false"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</RelativeLayout>
+

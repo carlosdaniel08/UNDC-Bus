@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LoginActivity"
+    android:gravity="center"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:src="@drawable/person_raising_hand_color_light"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            tools:ignore="ExtraText" />
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/robotobold"
+            android:text="¡Bienvenido!"
+            android:textColor="@color/Verde"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <TextView
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="Ingresa con tu correo institucional y \ncontraseña para usar tu cuenta."
+        android:textColor="@color/Black" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutCorreoInstitucional"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+
+        android:hint="Correo institucional">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtCorreoInstitucional"
+            android:background="@drawable/edt"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/robotoregular"
+            android:layout_height="60dp"
+            android:textSize="17sp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:inputType="textEmailAddress"
+            android:drawableStart="@drawable/e_mail_color"
+            android:drawablePadding="8dp"
+            android:imeOptions="actionNext"
+            android:maxLines="1"
+            android:autofillHints="emailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutContrasena"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Contraseña">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtContrasena"
+            android:background="@drawable/edt"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textSize="17sp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:inputType="textPassword"
+            android:drawableEnd="@drawable/see_no_evil_monkey_color"
+            android:imeOptions="actionDone"
+            android:maxLines="1"
+            android:autofillHints="password" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/cbRecordarCorreo"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:linksClickable="true"
+            android:text="Recordar cuenta"
+            android:textColorLink="@color/Verde"></CheckBox>
+
+        <TextView
+            android:id="@+id/tvRecuperarContraseña"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/robotobold"
+            android:text="Olvide mi contraseña"
+            android:textColor="@color/Verde" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnIngresar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/boton"
+        android:fontFamily="@font/robotobold"
+        android:gravity="center"
+        android:text="Ingresar"
+        android:textSize="17sp"
+        android:textColor="@color/White"/>
+
+    <TextView
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoregular"
+        android:textColor="@color/Black"
+        android:gravity="center"
+        android:text="¿No tienes una cuenta?"/>
+
+    <TextView
+        android:id="@+id/tvRegistrate"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotobold"
+        android:textColor="@color/Verde"
+        android:gravity="center"
+        android:text="REGISTRATE AQUÍ"/>
+
+</LinearLayout>

@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.UndcBusEstudiante" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/Verde</item>
+        <item name="colorPrimaryDark">@color/VerdeDark</item>
+        <item name="colorAccent">@color/VerdeAccent</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.UndcBusEstudiante" parent="Base.Theme.UndcBusEstudiante" />
+</resources>

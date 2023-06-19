@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="BackgroundVerde">#e8f6e9</color>
+    <color name="Verde">#4eb54c</color>
+    <color name="VerdeDark">#449548</color>
+    <color name="VerdeAccent">#9AEA3E</color>
+    <color name="Black">#000000</color>
+    <color name="White">#FFFFFF</color>
+    <color name="Fox">#E6E6E6</color>
+    <color name="FoxTwo">#909090</color>
+    <color name="GreenTwo">#D7EAD7</color>
+
+</resources>

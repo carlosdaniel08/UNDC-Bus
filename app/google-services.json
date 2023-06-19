@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "698252505545",
+    "firebase_url": "https://undc-bus-estudiante-default-rtdb.firebaseio.com",
+    "project_id": "undc-bus-estudiante",
+    "storage_bucket": "undc-bus-estudiante.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:698252505545:android:fc4d20f949466750593818",
+        "android_client_info": {
+          "package_name": "pe.carlos.undcbus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "698252505545-g2butmhoradvu8o0cjl77g3usdf94kbi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7Rm4ON6NqkDB_q8OrKuVmxFZE-WFfw-I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "698252505545-g2butmhoradvu8o0cjl77g3usdf94kbi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:698252505545:android:e5a21e59fbd79d0b593818",
+        "android_client_info": {
+          "package_name": "pe.carlos.undcbusestudiante"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "698252505545-g2butmhoradvu8o0cjl77g3usdf94kbi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7Rm4ON6NqkDB_q8OrKuVmxFZE-WFfw-I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "698252505545-g2butmhoradvu8o0cjl77g3usdf94kbi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".OnboardingActivity"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/robotobold"
+            android:text="¡Hola!"
+            android:textColor="@color/Verde"
+            android:textSize="40sp" />
+
+        <ImageView
+            android:layout_width="47dp"
+            android:layout_height="53dp"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/hand_with_fingers_splayed_color_light" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="Para funcionar correctamente necesitamos algunos permisos. "
+        android:textColor="@color/Black" />
+
+    <ImageView
+        android:layout_marginTop="40dp"
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/world_map_color" />
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Permiso de localización"
+        android:fontFamily="@font/robotobold"
+        android:textSize="24sp" />
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/descriptionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Necesitamos este permiso para poder mostrarte el mapa"
+        android:textSize="16sp" />
+
+
+    <Button
+        android:id="@+id/btnIngresar"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/boton"
+        android:fontFamily="@font/robotobold"
+        android:gravity="center"
+        android:text="Comenzar"
+        android:textSize="17sp"
+        android:textColor="@color/White"/>
+
+
+</LinearLayout>

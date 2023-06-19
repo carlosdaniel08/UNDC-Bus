@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">UndcBusEstudiante</string>
+
+    <string name="tipo_usuario_hint">Seleccione tu tipo de usuario</string>
+    <string name="terms_and_conditions">Al crear mi cuenta acepto los <a href="terms_activity://">términos y condiciones.</a></string>
+
+    <string name="firebase_error_invalid_email">La dirección de correo electrónico es inválida.</string>
+    <string name="firebase_error_wrong_password">La contraseña es incorrecta.</string>
+    <string name="firebase_error_user_not_found">No se encontró ningún usuario con esta dirección de correo electrónico.</string>
+    <string name="firebase_error_email_already_in_use">Esta dirección de correo electrónico ya está en uso.</string>
+    <string name="firebase_error_weak_password">La contraseña es débil. Debe tener al menos 6 caracteres.</string>
+    <string name="firebase_error_network_error">Error de red. Por favor, verifica tu conexión a internet.</string>
+    <!-- Agrega más traducciones de errores de Firebase según tus necesidades -->
+
+
+
+
+
+</resources>

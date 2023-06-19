@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/BackgroundVerde"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardCerrarSesion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp">
+
+        <ImageView
+            android:src="@drawable/no_entry_color"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            tools:ignore="ExtraText" />
+
+        <TextView
+            android:gravity="end"
+            android:layout_marginRight="40dp"
+            android:id="@+id/tvCerrarSesion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CERRAR SESIÓN"
+            android:fontFamily="@font/robotobold"
+            android:textColor="@color/Verde"
+            android:textSize="16sp"
+            android:padding="16dp"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvSaludo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buenas noches"
+            android:fontFamily="@font/robotobold"
+            android:textColor="@color/Black"
+            android:textSize="26sp"
+            app:layout_constraintTop_toBottomOf="@id/cardCerrarSesion"
+            app:layout_constraintStart_toStartOf="@id/cardCerrarSesion" />
+
+        <ImageView
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            tools:ignore="ExtraText" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        android:fontFamily="@font/robotobold"
+        android:textColor="@color/Verde"
+        android:textSize="25sp"
+        android:layout_marginStart="30dp" />
+
+    <TextView
+        android:id="@+id/tvCorreoInstitucional"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Correo Institucional"
+        android:fontFamily="@font/robotoregular"
+        android:textColor="@color/Black"
+
+        android:layout_marginStart="30dp" />
+
+    <TextView
+        android:id="@+id/tvUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TIPO DE USUARIO"
+        android:fontFamily="@font/robotobold"
+        android:textColor="@color/Black"
+        android:textSize="18sp"
+        android:layout_marginStart="30dp" />
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver buses cercanos"
+        android:fontFamily="@font/robotobold"
+        android:textColor="@color/Black"
+        android:textSize="18sp"
+        android:layout_marginStart="30dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvMapa"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:src="@drawable/oncoming_bus_color"
+                android:scaleType="fitCenter"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ir al mapa"
+                android:textColor="@color/Black"
+                android:gravity="center"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="10dp"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver horarios y rutas"
+        android:fontFamily="@font/robotobold"
+        android:textColor="@color/Black"
+        android:textSize="18sp"
+        android:layout_marginStart="30dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvRutas"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:src="@drawable/bus_stop_color"
+                android:scaleType="fitCenter"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ir al mapa"
+                android:textColor="@color/Black"
+                android:gravity="center"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="10dp"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>
