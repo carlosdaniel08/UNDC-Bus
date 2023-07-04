@@ -18,6 +18,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UndcBusEstudiante"
         tools:targetApi="31">
+        <activity
+            android:name=".BusesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TicketActivity"
+            android:exported="false" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -26,11 +32,11 @@
         <activity
             android:name=".OnboardingActivity"
             android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".TrackBusActivity"
@@ -43,9 +49,7 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>

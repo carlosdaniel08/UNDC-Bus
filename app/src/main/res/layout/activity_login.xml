@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".LoginActivity"
     android:gravity="center"
@@ -80,13 +80,13 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:textSize="17sp"
+            android:drawableEnd="@drawable/see_no_evil_monkey_color"
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
             android:inputType="textPassword"
-            android:drawableEnd="@drawable/see_no_evil_monkey_color"
             android:imeOptions="actionDone"
             android:maxLines="1"
-            android:autofillHints="password" />
+            android:autofillHints="password"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 

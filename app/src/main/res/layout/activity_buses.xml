@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/BackgroundVerde"
+    android:gravity="center"
+    android:padding="20dp"
+    tools:context=".BusesActivity">
+
+    <TextView
+        android:fontFamily="@font/robotobold"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/Black"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SELECCIONA TU RUTA">
+
+    </TextView>
+
+    <LinearLayout
+
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+
+            android:id="@+id/BusUno"
+            android:contentDescription="Bus 1"
+            android:scaleType="fitXY"
+            android:padding="16dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:backgroundTint="@color/White"
+            android:background="@drawable/boton"
+            android:src="@drawable/oncoming_bus_color"
+            android:gravity="center">
+
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/BusDos"
+            android:scaleType="fitXY"
+            android:padding="16dp"
+            android:contentDescription="Bus 2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="@color/White"
+            android:background="@drawable/boton"
+            android:src="@drawable/oncoming_bus_color"
+            android:gravity="center">
+        </ImageButton>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@color/Black"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="Bus 1"
+            android:gravity="center">
+        </TextView>
+
+        <TextView
+            android:textColor="@color/Black"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Bus 2"
+            android:gravity="center">
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/BusTres"
+            android:contentDescription="Bus 3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"
+            android:padding="16dp"
+            android:backgroundTint="@color/White"
+            android:background="@drawable/boton"
+            android:src="@drawable/oncoming_bus_color"
+            android:gravity="center">
+
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/BusCuatro"
+            android:scaleType="fitXY"
+            android:padding="16dp"
+            android:contentDescription="Bus 4"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="@color/White"
+            android:background="@drawable/boton"
+            android:src="@drawable/oncoming_bus_color"
+            android:gravity="center">
+        </ImageButton>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@color/Black"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+
+            android:text="Bus 3"
+            android:gravity="center">
+        </TextView>
+
+        <TextView
+            android:textColor="@color/Black"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Bus 4"
+            android:gravity="center">
+        </TextView>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

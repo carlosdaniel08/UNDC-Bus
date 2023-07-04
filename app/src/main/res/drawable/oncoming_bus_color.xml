@@ -95,8 +95,8 @@
         <aapt:attr name="android:fillColor">
             <gradient android:endX="16" android:endY="27"
                 android:startX="16" android:startY="24.355" android:type="linear">
-                <item android:color="#FFF6C34A" android:offset="0"/>
-                <item android:color="#FFD99D43" android:offset="1"/>
+                <item android:color="#4eb54c" android:offset="0"/>
+                <item android:color="#449548" android:offset="1"/>
             </gradient>
         </aapt:attr>
     </path>
@@ -104,7 +104,7 @@
         <aapt:attr name="android:fillColor">
             <gradient android:endX="25.458" android:endY="27"
                 android:startX="30.43" android:startY="27" android:type="linear">
-                <item android:color="#FF98732C" android:offset="0"/>
+                <item android:color="#449548" android:offset="0"/>
                 <item android:color="#0098732C" android:offset="1"/>
             </gradient>
         </aapt:attr>
@@ -113,7 +113,7 @@
         <aapt:attr name="android:fillColor">
             <gradient android:endX="6.708" android:endY="27"
                 android:startX="5" android:startY="27" android:type="linear">
-                <item android:color="#FFC6A860" android:offset="0"/>
+                <item android:color="#449548" android:offset="0"/>
                 <item android:color="#00C6A860" android:offset="1"/>
             </gradient>
         </aapt:attr>
@@ -304,8 +304,8 @@
         <aapt:attr name="android:strokeColor">
             <gradient android:endX="16.185" android:endY="23.024"
                 android:startX="16.185" android:startY="23.781" android:type="linear">
-                <item android:color="#FFFFDE69" android:offset="0"/>
-                <item android:color="#FFCA9049" android:offset="1"/>
+                <item android:color="#4eb54c" android:offset="0"/>
+                <item android:color="#449548" android:offset="1"/>
             </gradient>
         </aapt:attr>
     </path>
@@ -315,8 +315,8 @@
         <aapt:attr name="android:strokeColor">
             <gradient android:endX="16.278" android:endY="21.024"
                 android:startX="16.278" android:startY="21.781" android:type="linear">
-                <item android:color="#FFFFDE69" android:offset="0"/>
-                <item android:color="#FFCA9049" android:offset="1"/>
+                <item android:color="#4eb54c" android:offset="0"/>
+                <item android:color="#449548" android:offset="1"/>
             </gradient>
         </aapt:attr>
     </path>
@@ -326,7 +326,7 @@
         <aapt:attr name="android:strokeColor">
             <gradient android:endX="6.722" android:endY="23.938"
                 android:startX="7.675" android:startY="25.141" android:type="linear">
-                <item android:color="#FFFFDE69" android:offset="0"/>
+                <item android:color="#4eb54c" android:offset="0"/>
                 <item android:color="#00FFDE69" android:offset="1"/>
             </gradient>
         </aapt:attr>
@@ -337,7 +337,7 @@
             <gradient android:endX="7.766" android:endY="20.897"
                 android:startX="6.36" android:startY="23" android:type="linear">
                 <item android:color="#00CA9049" android:offset="0"/>
-                <item android:color="#FFCA9049" android:offset="1"/>
+                <item android:color="#4eb54c" android:offset="1"/>
             </gradient>
         </aapt:attr>
     </path>
@@ -355,7 +355,7 @@
         <aapt:attr name="android:strokeColor">
             <gradient android:endX="26.001" android:endY="23.625"
                 android:startX="24.441" android:startY="25.094" android:type="linear">
-                <item android:color="#FFF4C86E" android:offset="0"/>
+                <item android:color="#4eb54c" android:offset="0"/>
                 <item android:color="#00F4C86E" android:offset="1"/>
             </gradient>
         </aapt:attr>

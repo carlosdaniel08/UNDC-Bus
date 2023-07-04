@@ -144,9 +144,9 @@
         android:layout_marginTop="28dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:buttonTint="@color/Verde"
+
         android:linksClickable="true"
-        android:textColorLink="@color/Verde"
+
         android:autoLink="web"
         android:text="@string/terms_and_conditions">
     </CheckBox>

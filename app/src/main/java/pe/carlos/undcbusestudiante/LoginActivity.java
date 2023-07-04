@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText correoInstitucional, editTextPassword;
     FirebaseAuth firebaseAuth;
     TextView tvRegistrate;
-
+    private int cursorPosition = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -102,18 +102,45 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_UP) {
-                    if (event.getRawX() >= (editTextPassword.getRight() - editTextPassword.getCompoundDrawables()[2].getBounds().width())) {
-                        if (editTextPassword.getInputType() == (InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD)) {
-                            editTextPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
-                            editTextPassword.setCompoundDrawablesRelativeWithIntrinsicBounds(null, null, drawableHidden, null);
-                        } else {
-                            editTextPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-                            editTextPassword.setCompoundDrawablesRelativeWithIntrinsicBounds(null, null, drawableVisible, null);
-                        }
+                    if (isTouchOnPasswordToggle(event)) {
+                        saveCursorPosition();
+                        togglePasswordVisibility();
+                        restoreCursorPosition();
                         return true;
                     }
                 }
                 return false;
+            }
+
+            private boolean isTouchOnPasswordToggle(MotionEvent event) {
+                int drawableRight = editTextPassword.getRight();
+                int drawableWidth = editTextPassword.getCompoundDrawables()[2].getBounds().width();
+                float touchX = event.getRawX();
+                return touchX >= (drawableRight - drawableWidth);
+            }
+
+            private void saveCursorPosition() {
+                cursorPosition = editTextPassword.getSelectionStart();
+            }
+
+            private void restoreCursorPosition() {
+                editTextPassword.setSelection(cursorPosition);
+            }
+
+            private void togglePasswordVisibility() {
+                int inputType = editTextPassword.getInputType();
+                int newInputType = inputType == (InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD)
+                        ? (InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD)
+                        : (InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                editTextPassword.setInputType(newInputType);
+                updatePasswordToggleIcon(inputType);
+            }
+
+            private void updatePasswordToggleIcon(int inputType) {
+                Drawable toggleIcon = inputType == (InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD)
+                        ? drawableHidden
+                        : drawableVisible;
+                editTextPassword.setCompoundDrawablesRelativeWithIntrinsicBounds(null, null, toggleIcon, null);
             }
         });
 

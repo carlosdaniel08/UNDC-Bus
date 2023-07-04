@@ -11,17 +11,23 @@ import android.net.Network;
 import android.net.NetworkCapabilities;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.perf.FirebasePerformance;
+import com.google.firebase.perf.metrics.Trace;
+
 
 import java.util.Calendar;
 
@@ -31,12 +37,16 @@ public class MainActivity extends AppCompatActivity {
     private TextView tvNombre;
     private TextView tvCorreoInstitucional;
     private TextView tvUsuario;
-    private CardView cvMapa;
+    private CardView cvMapa, cvRutas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Trace trace = FirebasePerformance.getInstance().newTrace("prueba_MainActivity");
+        trace.start();
+
 
 
         tvSaludo = findViewById(R.id.tvSaludo);
@@ -57,6 +67,9 @@ public class MainActivity extends AppCompatActivity {
 //            finish();// Finalizar la actividad si no hay conexión
 //        }
 
+
+
+
         cvMapa = findViewById(R.id.cvMapa);
         cvMapa.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,6 +77,15 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, TrackBusActivity.class);
                 startActivity(intent);
                 
+            }
+        });
+
+        cvRutas = findViewById(R.id.cvRutas);
+        cvRutas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, BusesActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -78,6 +100,9 @@ public class MainActivity extends AppCompatActivity {
 
         // Consultar usuario de Firebase
         consultarUsuarioFirebase();
+
+        // Código a medir
+        trace.stop();
     }
 
 //    private boolean isConnectedToInternet() {
