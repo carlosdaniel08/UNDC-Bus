@@ -1,6 +1,7 @@
 package pe.carlos.undcbusestudiante;
 
 import android.Manifest;
+import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.widget.Switch;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.core.app.ActivityCompat;
@@ -235,5 +237,29 @@ public class TrackBusActivity extends AppCompatActivity implements OnMapReadyCal
                 switchOnlineOffline.setChecked(false);
             }
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        // Realiza las acciones que deseas cuando se presiona el botón de retroceso
+
+        // Por ejemplo, puedes mostrar un diálogo de confirmación antes de salir de la actividad
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("¿Deseas salir y dejar de compartir la ubicación?")
+                .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Realiza las acciones para salir de la aplicación
+                        finish();
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // No se hace nada, simplemente se cierra el diálogo
+                        dialog.dismiss();
+                    }
+                })
+                .show();
     }
 }
