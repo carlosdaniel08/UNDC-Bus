@@ -138,15 +138,26 @@
         android:prompt="@string/tipo_usuario_hint"
         android:textSize="17sp" />
 
+    <Spinner
+        android:layout_marginTop="10dp"
+        android:id="@+id/spTipoBus"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/edt"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:prompt="@string/spinner_prompt"
+        android:textSize="17sp"
+        android:visibility="gone" />
+
+
     <CheckBox
         android:id="@+id/cbTerminosCondiciones"
         android:padding="8dp"
         android:layout_marginTop="28dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:linksClickable="true"
-
         android:autoLink="web"
         android:text="@string/terms_and_conditions">
     </CheckBox>

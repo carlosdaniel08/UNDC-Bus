@@ -10,6 +10,7 @@ import android.text.InputType;
 import android.text.TextUtils;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -34,10 +35,9 @@ public class RegisterActivity extends AppCompatActivity {
 
     Button btnRegistrar;
     EditText CorreoIntitucional, Nombre, editTextPassword;
-    Spinner spTipoUsuario;
+    Spinner spTipoUsuario, spTipoBus;
     FirebaseAuth firebaseAuth;
     CheckBox cbTerminosCondiciones;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +49,7 @@ public class RegisterActivity extends AppCompatActivity {
         editTextPassword = findViewById(R.id.edtContrasena);
         btnRegistrar = findViewById(R.id.btnRegistrar);
         spTipoUsuario = findViewById(R.id.spTipoUsuario);
+        spTipoBus = findViewById(R.id.spTipoBus);
         firebaseAuth = FirebaseAuth.getInstance();
         cbTerminosCondiciones = findViewById(R.id.cbTerminosCondiciones);
 
@@ -57,11 +58,41 @@ public class RegisterActivity extends AppCompatActivity {
         tiposUsuarios.add("ESTUDIANTE");
         tiposUsuarios.add("DOCENTE");
         tiposUsuarios.add("ADMINISTRATIVO");
+        tiposUsuarios.add("CONDUCTOR");
+
+        // Crear una lista de elementos para el Spinner de bus
+        List<String> tiposBuses = new ArrayList<>();
+        tiposBuses.add("Bus A");
+        tiposBuses.add("Bus B");
+        tiposBuses.add("Bus C");
+        tiposBuses.add("Bus D");
+        tiposBuses.add("Bus Interprovincial");
 
         // Crear un adaptador utilizando el contexto, el layout para los elementos y la lista de valores
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, tiposUsuarios);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spTipoUsuario.setAdapter(adapter);
+
+        ArrayAdapter<String> adapterBus = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, tiposBuses);
+        adapterBus.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spTipoBus.setAdapter(adapterBus);
+
+        spTipoUsuario.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                String selectedItem = parentView.getItemAtPosition(position).toString();
+                if ("CONDUCTOR".equals(selectedItem)) {
+                    spTipoBus.setVisibility(View.VISIBLE); // Muestra el Spinner para el tipo de bus
+                } else {
+                    spTipoBus.setVisibility(View.GONE); // Oculta el Spinner para el tipo de bus
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                // No necesitas hacer nada aquí
+            }
+        });
 
         Drawable drawableVisible = getResources().getDrawable(R.drawable.see_no_evil_monkey_color);
         Drawable drawableHidden = getResources().getDrawable(R.drawable.hear_no_evil_monkey_color);
@@ -93,6 +124,7 @@ public class RegisterActivity extends AppCompatActivity {
                 String nombre = Nombre.getText().toString();
                 String contrasena = editTextPassword.getText().toString();
                 String tipoUsuario = spTipoUsuario.getSelectedItem().toString();
+                String tipoBus = spTipoBus.getSelectedItem().toString();
 
                 CheckBox cbTerminosCondiciones = findViewById(R.id.cbTerminosCondiciones);
                 boolean isChecked = cbTerminosCondiciones.isChecked();
@@ -102,7 +134,6 @@ public class RegisterActivity extends AppCompatActivity {
                 }
 
                 if (!isChecked) {
-                    // El CheckBox no está seleccionado, mostrar un mensaje de error o realizar acciones adicionales según tus necesidades
                     Toast.makeText(RegisterActivity.this, "Debes aceptar los términos y condiciones", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -113,15 +144,13 @@ public class RegisterActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
                                     FirebaseUser firebaseUser = task.getResult().getUser();
-                                    onAuthSuccess(firebaseUser, nombre, tipoUsuario);
+                                    onAuthSuccess(firebaseUser, nombre, tipoUsuario, tipoBus);
                                     firebaseUser.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {
                                             if (task.isSuccessful()) {
-                                                // Correo de verificación enviado exitosamente
                                                 Toast.makeText(RegisterActivity.this, "Se ha enviado un correo de verificación", Toast.LENGTH_SHORT).show();
                                             } else {
-                                                // Error al enviar el correo de verificación
                                                 Toast.makeText(RegisterActivity.this, "Error al enviar el correo de verificación", Toast.LENGTH_SHORT).show();
                                             }
                                         }
@@ -134,25 +163,17 @@ public class RegisterActivity extends AppCompatActivity {
                         });
             }
         });
-
-
     }
 
     private boolean validateForm() {
         boolean result = true;
-
-        // Crea una lista para almacenar los campos a validar
         List<EditText> editTextList = new ArrayList<>();
-
-        // Agrega los campos a la lista
         editTextList.add(CorreoIntitucional);
         editTextList.add(Nombre);
         editTextList.add(editTextPassword);
 
-        // Itera sobre la lista y valida cada campo
         for (EditText editText : editTextList) {
             String fieldValue = editText.getText().toString();
-
             if (TextUtils.isEmpty(fieldValue)) {
                 editText.setError("Requerido");
                 result = false;
@@ -161,7 +182,6 @@ public class RegisterActivity extends AppCompatActivity {
             }
         }
 
-        // Verifica la validez del correo institucional
         String email = CorreoIntitucional.getText().toString();
         if (!TextUtils.isEmpty(email) && !email.endsWith("@undc.edu.pe")) {
             CorreoIntitucional.setError("Utiliza tu correo institucional");
@@ -171,15 +191,18 @@ public class RegisterActivity extends AppCompatActivity {
         return result;
     }
 
-    private void onAuthSuccess(FirebaseUser firebaseUser, String nombre, String tipoUsuario ) {
+    private void onAuthSuccess(FirebaseUser firebaseUser, String nombre, String tipoUsuario, String tipoBus) {
         String userId = firebaseUser.getUid();
 
         Map<String, Object> userData = new HashMap<>();
-        userData.put("IdUsuario",firebaseUser.getUid());
+        userData.put("IdUsuario", firebaseUser.getUid());
         userData.put("Nombre", nombre);
         userData.put("TipoUsuario", tipoUsuario);
         userData.put("Correo", firebaseUser.getEmail());
 
+        if ("CONDUCTOR".equals(tipoUsuario)) {
+            userData.put("TipoBus", tipoBus);
+        }
 
         DatabaseReference userRef = FirebaseDatabase.getInstance().getReference().child("users").child(userId);
         userRef.setValue(userData)
@@ -187,13 +210,8 @@ public class RegisterActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-
-                            //Toast.makeText(RegisterActivity.this, "Registro exitoso", Toast.LENGTH_SHORT).show();
-                            // Aquí puedes iniciar una nueva actividad, por ejemplo:
                             Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                             startActivity(intent);
-
-                            // También puedes finalizar la actividad actual si ya no es necesaria
                             finish();
                         } else {
                             Toast.makeText(RegisterActivity.this, "Error al guardar los datos adicionales", Toast.LENGTH_SHORT).show();
@@ -204,6 +222,5 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void hideProgressDialog() {
         // Aquí puedes ocultar el diálogo de progreso
-        // Por ejemplo, si estás utilizando un ProgressDialog, puedes llamar a progressDialog.dismiss()
     }
 }

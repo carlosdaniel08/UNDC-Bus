@@ -67,6 +67,7 @@ public class TicketActivity extends AppCompatActivity implements View.OnTouchLis
                     int seatIndex = Integer.parseInt(seatSnapshot.getKey());
                     Boolean isSelected = seatSnapshot.child("isSelected").getValue(Boolean.class);
                     Boolean isOccupied = seatSnapshot.child("isOccupied").getValue(Boolean.class);
+                    String userName = seatSnapshot.child("userName").getValue(String.class);
 
                     if (isSelected != null && isSelected.booleanValue()) {
                         isSeatSelected[seatIndex] = true;
@@ -174,9 +175,19 @@ public class TicketActivity extends AppCompatActivity implements View.OnTouchLis
     }
 
     private void deselectSeat() {
-        // Deselecciona el asiento en Firebase
-        seatsRef.child(String.valueOf(selectedSeatIndex)).child("isSelected").setValue(false);
-        selectedSeatIndex = -1;
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Confirmación")
+                .setMessage("¿Deseas deseleccionar tu asiento?")
+                .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Deselecciona el asiento en Firebase
+                        seatsRef.child(String.valueOf(selectedSeatIndex)).child("isSelected").setValue(false);
+                        selectedSeatIndex = -1;
+                    }
+                })
+                .setNegativeButton("No", null)
+                .show();
     }
 
     private void showErrorMessage(String message) {

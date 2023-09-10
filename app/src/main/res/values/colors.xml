@@ -2,6 +2,8 @@
 <resources>
 
     <color name="BackgroundVerde">#e8f6e9</color>
+    <color name="BackgroundRojo">#F8D1C5</color>
+    <color name="Rojo">#FF5722</color>
     <color name="Verde">#4eb54c</color>
     <color name="VerdeDark">#449548</color>
     <color name="VerdeAccent">#9AEA3E</color>

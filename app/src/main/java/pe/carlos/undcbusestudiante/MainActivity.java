@@ -4,16 +4,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-import android.content.Context;
 import android.content.Intent;
-import android.net.ConnectivityManager;
-import android.net.Network;
-import android.net.NetworkCapabilities;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,14 +23,17 @@ import com.google.firebase.perf.FirebasePerformance;
 import com.google.firebase.perf.metrics.Trace;
 
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
     private TextView tvSaludo;
     private TextView tvNombre;
     private TextView tvCorreoInstitucional;
-    private TextView tvUsuario;
+    private TextView tvUsuario, tvTipoBus;
     private CardView cvMapa, cvRutas;
 
     @Override
@@ -48,10 +45,10 @@ public class MainActivity extends AppCompatActivity {
         trace.start();
 
 
-
         tvSaludo = findViewById(R.id.tvSaludo);
         tvNombre = findViewById(R.id.tvNombre);
         tvUsuario = findViewById(R.id.tvUsuario);
+        tvTipoBus = findViewById(R.id.tvTipoBus);
         tvCorreoInstitucional = findViewById(R.id.tvCorreoInstitucional);
         String saludo = obtenerSaludoSegunHora();
         tvSaludo.setText(saludo);
@@ -76,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, TrackBusActivity.class);
                 startActivity(intent);
-                
+
             }
         });
 
@@ -84,8 +81,8 @@ public class MainActivity extends AppCompatActivity {
         cvRutas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, BusesActivity.class);
-                startActivity(intent);
+               // Intent intent = new Intent(MainActivity.this, HorariosEstudianteActivity.class);
+               // startActivity(intent);
             }
         });
 
@@ -161,13 +158,28 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     if (dataSnapshot.exists()) {
+                        String userId = user.getUid();
                         String username = dataSnapshot.child("Nombre").getValue(String.class);
                         String userEmail = dataSnapshot.child("Correo").getValue(String.class);
                         String tipoUsuario = dataSnapshot.child("TipoUsuario").getValue(String.class);
+                        String tipoBus = dataSnapshot.child("TipoBus").getValue(String.class);
 
                         tvNombre.setText(username);
                         tvCorreoInstitucional.setText(userEmail);
                         tvUsuario.setText(tipoUsuario);
+                        tvTipoBus.setText(tipoBus);
+
+                        // Verificar si el tipoBus no es nulo o vacío
+                        if (tipoBus != null && !tipoBus.isEmpty()) {
+                            tvTipoBus.setText(tipoBus);
+                            tvTipoBus.setVisibility(View.VISIBLE); // Mostrar el TextView
+                        } else {
+                            tvTipoBus.setVisibility(View.GONE); // Ocultar el TextView si no hay información
+                        }
+
+                        // Guardar el historial con los datos del usuario
+                        guardarHistorial(userId, username, tipoUsuario);
+
                     }
                 }
 
@@ -187,4 +199,24 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+
+
+    private void guardarHistorial(String userId, String nombreUsuario, String tipoUsuario) {
+        String fecha = obtenerFechaActual();
+        String actividad = "cvMapa"; // o "cvRutas" según corresponda
+
+        Historial historial = new Historial(fecha, actividad, userId, nombreUsuario, tipoUsuario);
+
+        DatabaseReference historialRef = FirebaseDatabase.getInstance().getReference().child("historial");
+        String nuevoHistorialKey = historialRef.push().getKey();
+        historialRef.child(nuevoHistorialKey).setValue(historial);
+    }
+
+    private String obtenerFechaActual() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+        Date date = new Date();
+        return dateFormat.format(date);
+    }
+
 }

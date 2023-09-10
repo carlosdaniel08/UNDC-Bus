@@ -9,6 +9,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.text.InputType;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -20,14 +21,20 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import pe.carlos.undcbusestudiante.Administrador.AdministradorActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -168,14 +175,62 @@ public class LoginActivity extends AppCompatActivity {
                                 FirebaseUser currentUser = firebaseAuth.getCurrentUser();
                                 if (currentUser != null && !currentUser.isEmailVerified()) {
                                     // El correo electrónico no está verificado
+                                    //Borrar despues esto
+
+                                    // Inicio de sesión exitoso y correo electrónico verificado
+                                    // Consulta la base de datos para obtener el tipo de usuario
+                                    DatabaseReference userRef = FirebaseDatabase.getInstance().getReference().child("users").child(currentUser.getUid()).child("TipoUsuario");
+                                    userRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                                        @Override
+                                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                            String userType = dataSnapshot.getValue(String.class);
+                                            Log.d("LoginActivity", "Tipo de usuario: " + userType); // Agregar este log
+                                            if ("ADMINISTRADOR".equals(userType)) {
+                                                // Inicia la actividad de administrador
+                                                startActivity(new Intent(LoginActivity.this, AdministradorActivity.class));
+                                            } else {
+                                                // Inicia la actividad para usuarios regulares
+                                                startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                                            }
+                                        }
+
+                                        @Override
+                                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                                            // Manejar error
+                                            Toast.makeText(LoginActivity.this, "Error al obtener el tipo de usuario", Toast.LENGTH_SHORT).show();
+                                        }
+                                    });
+
+
                                     Toast.makeText(LoginActivity.this, "Por favor, verifica tu correo electrónico", Toast.LENGTH_SHORT).show();
-                                    firebaseAuth.signOut(); // Cerrar sesión del usuario
+                                    // firebaseAuth.signOut(); // Cerrar sesión del usuario
+
+
+
                                 } else {
                                     // Inicio de sesión exitoso y correo electrónico verificado
-                                    Toast.makeText(LoginActivity.this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
-                                    // Aquí puedes redirigir al usuario a la actividad principal o realizar otras acciones
-                                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                                    startActivity(intent);
+                                    // Consulta la base de datos para obtener el tipo de usuario
+                                    DatabaseReference userRef = FirebaseDatabase.getInstance().getReference().child("users").child(currentUser.getUid()).child("TipoUsuario");
+                                    userRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                                        @Override
+                                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                            String userType = dataSnapshot.getValue(String.class);
+                                            Log.d("LoginActivity", "Tipo de usuario: " + userType); // Agregar este log
+                                            if ("ADMINISTRADOR".equals(userType)) {
+                                                // Inicia la actividad de administrador
+                                                startActivity(new Intent(LoginActivity.this, AdministradorActivity.class));
+                                            } else {
+                                                // Inicia la actividad para usuarios regulares
+                                                startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                                            }
+                                        }
+
+                                        @Override
+                                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                                            // Manejar error
+                                            Toast.makeText(LoginActivity.this, "Error al obtener el tipo de usuario", Toast.LENGTH_SHORT).show();
+                                        }
+                                    });
                                 }
                             } else {
                                 // Error en el inicio de sesión
