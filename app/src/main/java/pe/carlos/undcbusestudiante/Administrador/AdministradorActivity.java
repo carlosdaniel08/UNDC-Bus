@@ -23,6 +23,7 @@ import java.util.Calendar;
 
 import pe.carlos.undcbusestudiante.LoginActivity;
 import pe.carlos.undcbusestudiante.R;
+import pe.carlos.undcbusestudiante.RutasActivity;
 
 public class AdministradorActivity extends AppCompatActivity {
 
@@ -71,7 +72,8 @@ public class AdministradorActivity extends AppCompatActivity {
         cvHorarios.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                    Intent intent = new Intent(AdministradorActivity.this, RutasActivity.class);
+                   startActivity(intent);
 
             }
         });

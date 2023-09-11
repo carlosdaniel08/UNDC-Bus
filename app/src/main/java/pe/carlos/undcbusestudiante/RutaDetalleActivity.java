@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class HorariosActivity extends AppCompatActivity {
+public class RutaDetalleActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_horarios);
+        setContentView(R.layout.activity_ruta_detalle);
     }
 }
