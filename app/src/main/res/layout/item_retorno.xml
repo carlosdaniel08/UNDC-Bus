@@ -8,7 +8,7 @@ android:layout_height="wrap_content">
 <TableRow>
     <!-- Primera columna -->
     <TextView
-        android:id="@+id/nombreParaderoTextView"
+        android:id="@+id/ParaderoRetornoTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"

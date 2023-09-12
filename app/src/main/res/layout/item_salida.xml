@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="8dp">
+    android:layout_height="wrap_content">
 
+    <TableRow>
+        <!-- Primera columna -->
+        <TextView
+            android:id="@+id/ParaderoSalidaTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Nombre del Paradero"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
+        <!-- Segunda columna -->
+        <TextView
+            android:id="@+id/horarioSalidaTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Horario: 08:00 AM"
+            android:textSize="14sp" />
+    </TableRow>
 
-    <TextView
-        android:id="@+id/nombreParaderoTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nombre del Paradero"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/horarioParaderoTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Horario: 08:00 AM"
-        android:textSize="14sp" />
-
-</LinearLayout>
+</TableLayout>

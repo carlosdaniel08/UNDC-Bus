@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -25,6 +26,8 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import pe.carlos.undcbusestudiante.Adapter.RutasAdapter;
+
 public class RutasActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RutasAdapter rutasAdapter;
@@ -36,6 +39,7 @@ public class RutasActivity extends AppCompatActivity {
         setContentView(R.layout.activity_rutas);
 
         recyclerView = findViewById(R.id.recyclerViewRutas);
+
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
@@ -88,6 +92,19 @@ public class RutasActivity extends AppCompatActivity {
         final EditText turnoEditText = viewInflated.findViewById(R.id.turnoEditText);
         final EditText puntoRecojoEditText = viewInflated.findViewById(R.id.puntoRecojoEditText);
 
+        final LinearLayout paraderosLayout = viewInflated.findViewById(R.id.paraderosLayout);
+        Button agregarParaderoButton = viewInflated.findViewById(R.id.agregarParaderoButton);
+
+        // Manejar la adición dinámica de paraderos y horarios
+        agregarParaderoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Inflar un nuevo layout con dos EditText para el paradero y el horario
+                View nuevoParaderoView = LayoutInflater.from(RutasActivity.this).inflate(R.layout.layout_nuevo_paradero, null);
+                paraderosLayout.addView(nuevoParaderoView);
+            }
+        });
+
         builder.setPositiveButton("Agregar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -99,6 +116,19 @@ public class RutasActivity extends AppCompatActivity {
                 if (!nombre.isEmpty() && !turno.isEmpty() && !puntoRecojo.isEmpty()) {
                     // Crea una nueva instancia de la clase Ruta con los datos ingresados
                     Ruta nuevaRuta = new Ruta(nombre, turno, puntoRecojo);
+
+                    // Recupera y agrega los paraderos y horarios ingresados dinámicamente
+                    for (int i = 0; i < paraderosLayout.getChildCount(); i++) {
+                        View paraderoView = paraderosLayout.getChildAt(i);
+                        EditText paraderoEditText = paraderoView.findViewById(R.id.paraderoEditText);
+                        EditText horarioEditText = paraderoView.findViewById(R.id.horarioEditText);
+                        String paradero = paraderoEditText.getText().toString();
+                        String horario = horarioEditText.getText().toString();
+
+                        if (!paradero.isEmpty() && !horario.isEmpty()) {
+                            nuevaRuta.agregarSalida(new Salida(paradero, horario));
+                        }
+                    }
 
                     // Guarda la nueva ruta en Firebase (debes implementar esta parte)
                     guardarRutaEnFirebase(nuevaRuta);

@@ -23,4 +23,18 @@
         android:layout_height="wrap_content"
         android:hint="Punto de Recojo" />
 
+    <!-- LinearLayout para agregar paraderos y horarios dinámicamente -->
+    <LinearLayout
+        android:id="@+id/paraderosLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/agregarParaderoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar Paradero" />
+
 </LinearLayout>
