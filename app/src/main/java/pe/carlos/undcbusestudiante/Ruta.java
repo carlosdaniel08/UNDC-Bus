@@ -1,11 +1,12 @@
 package pe.carlos.undcbusestudiante;
 
+import java.util.List;
+
 public class Ruta {
     private String nombre;
     private String turno;
     private String puntoRecojo;
 
-    // Constructor
     public Ruta() {
         // Constructor vacío requerido por Firebase
     }

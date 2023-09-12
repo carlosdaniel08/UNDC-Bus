@@ -6,25 +6,149 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <TextView
-        android:id="@+id/nombreTextView"
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Nombre de Ruta"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ruta: "
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/nombreTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Turno: " />
+
+        <TextView
+            android:id="@+id/turnoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Punto de Recojo: "
+             />
+
+        <TextView
+            android:id="@+id/puntoRecojoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             />
+
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/turnoTextView"
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Turno: Mañana"
-        android:textSize="14sp" />
+        android:text="SALIDA"
+        android:layout_marginTop="5dp"
+
+        android:textStyle="bold"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+        <!-- Encabezado -->
+        <TableRow
+            android:background="@color/Verde">
+            <!-- Primera columna -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PARADERO"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF" />
+
+            <!-- Segunda columna -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="HORARIO"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF" />
+        </TableRow>
+    </TableLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewSalidas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <TextView
-        android:id="@+id/puntoRecojoTextView"
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Punto de Recojo: Nombre de Recojo"
-        android:textSize="14sp" />
+        android:text="RETORNO"
+        android:layout_marginTop="5dp"
+
+        android:textStyle="bold"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+        <!-- Encabezado -->
+        <TableRow
+            android:background="@color/Rojo">
+            <!-- Primera columna -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PARADERO"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF" />
+
+            <!-- Segunda columna -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="HORARIO"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF" />
+        </TableRow>
+    </TableLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewRetornos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
 </LinearLayout>

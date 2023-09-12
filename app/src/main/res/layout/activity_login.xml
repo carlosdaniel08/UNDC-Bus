@@ -123,8 +123,8 @@
         android:fontFamily="@font/robotobold"
         android:gravity="center"
         android:text="Ingresar"
-        android:textSize="17sp"
-        android:textColor="@color/White"/>
+        android:textColor="@color/White"
+        android:textSize="17sp" />
 
     <TextView
         android:layout_marginTop="50dp"
