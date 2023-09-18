@@ -1,4 +1,4 @@
-package pe.carlos.undcbusestudiante;
+package pe.carlos.undcbusestudiante.Class;
 
 public class Salida {
     private String paraderosalida;

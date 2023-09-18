@@ -1,6 +1,5 @@
 package pe.carlos.undcbusestudiante.Adapter;
 
-import android.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,20 +13,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 import pe.carlos.undcbusestudiante.R;
-import pe.carlos.undcbusestudiante.Ruta;
-import pe.carlos.undcbusestudiante.Salida;
+import pe.carlos.undcbusestudiante.Class.Ruta;
+import pe.carlos.undcbusestudiante.Class.Salida;
+import pe.carlos.undcbusestudiante.Class.Retorno;
 
 public class RutasAdapter extends RecyclerView.Adapter<RutasAdapter.RutaViewHolder> {
 
     private List<Ruta> rutas = new ArrayList<>();
     private List<Salida> salidas = new ArrayList<>(); // Agrega esta lista para el SalidaAdapter
-
+    private List<Retorno> retornos = new ArrayList<>();
 
     public void setRutas(List<Ruta> rutas) {
         this.rutas = rutas;
         notifyDataSetChanged();
     }
-
 
     @NonNull
     @Override
@@ -51,6 +50,12 @@ public class RutasAdapter extends RecyclerView.Adapter<RutasAdapter.RutaViewHold
         holder.recyclerViewSalidas.setLayoutManager(new LinearLayoutManager(holder.itemView.getContext()));
         holder.recyclerViewSalidas.setAdapter(salidaAdapter);
 
+        // Configura recyclerViewRetornos con el adaptador RetornoAdapter
+        RetornoAdapter retornoAdapter = new RetornoAdapter();
+        retornoAdapter.setRetornos(ruta.getRetornos()); // Asegúrate de que esta lista no esté vacía
+        holder.recyclerViewRetornos.setLayoutManager(new LinearLayoutManager(holder.itemView.getContext()));
+        holder.recyclerViewRetornos.setAdapter(retornoAdapter);
+
     }
 
     @Override
@@ -60,6 +65,7 @@ public class RutasAdapter extends RecyclerView.Adapter<RutasAdapter.RutaViewHold
 
     public class RutaViewHolder extends RecyclerView.ViewHolder {
         RecyclerView recyclerViewSalidas;
+        RecyclerView recyclerViewRetornos;
         TextView nombreTextView;
         TextView turnoTextView;
         TextView puntoRecojoTextView;
@@ -72,6 +78,7 @@ public class RutasAdapter extends RecyclerView.Adapter<RutasAdapter.RutaViewHold
             turnoTextView = itemView.findViewById(R.id.turnoTextView);
             puntoRecojoTextView = itemView.findViewById(R.id.puntoRecojoTextView);
             recyclerViewSalidas = itemView.findViewById(R.id.recyclerViewSalidas); // Asegúrate de tener este ID en tu diseño XML
+            recyclerViewRetornos = itemView.findViewById(R.id.recyclerViewRetornos);
 
         }
     }

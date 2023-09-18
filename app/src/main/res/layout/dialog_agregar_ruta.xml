@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -7,20 +8,43 @@
 
     <EditText
         android:id="@+id/nombreEditText"
+        android:background="@drawable/edt"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
+        android:fontFamily="@font/robotoregular"
+        android:textSize="17sp"
+        android:drawablePadding="10dp"
+        android:drawableStart="@drawable/e_mail_color"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
         android:hint="Nombre de la Ruta" />
 
     <EditText
         android:id="@+id/turnoEditText"
+        android:background="@drawable/edt"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
+        android:fontFamily="@font/robotoregular"
+        android:textSize="17sp"
+        android:drawablePadding="10dp"
+        android:drawableStart="@drawable/e_mail_color"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_marginTop="10dp"
         android:hint="Turno (Mañana, Tarde, Noche)" />
 
     <EditText
         android:id="@+id/puntoRecojoEditText"
+        android:background="@drawable/edt"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
+        android:fontFamily="@font/robotoregular"
+        android:textSize="17sp"
+        android:drawablePadding="10dp"
+        android:drawableStart="@drawable/e_mail_color"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_marginTop="10dp"
         android:hint="Punto de Recojo" />
 
     <!-- LinearLayout para agregar paraderos y horarios dinámicamente -->
@@ -28,13 +52,34 @@
         android:id="@+id/paraderosLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"></LinearLayout>
+
+    <Button
+        android:id="@+id/agregarParaderoButton"
+        android:textColor="@color/White"
+        android:background="@drawable/boton_rojo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Agregar Paradero SALIDA" />
+
+    <LinearLayout
+        android:id="@+id/paraderosRetornoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:orientation="vertical">
     </LinearLayout>
 
     <Button
-        android:id="@+id/agregarParaderoButton"
-        android:layout_width="wrap_content"
+        android:id="@+id/agregarParaderoRetornoButton"
+        android:textColor="@color/White"
+        android:background="@drawable/boton_rojo"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Agregar Paradero" />
+        android:layout_marginTop="10dp"
+        android:text="Agregar Paradero RETORNO" />
+
 
 </LinearLayout>

@@ -28,6 +28,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
+import pe.carlos.undcbusestudiante.Class.Historial;
+
 public class MainActivity extends AppCompatActivity {
 
     private TextView tvSaludo;

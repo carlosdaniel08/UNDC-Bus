@@ -14,11 +14,13 @@ android:layout_height="wrap_content">
         android:layout_weight="1"
         android:text="Nombre del Paradero"
         android:textSize="16sp"
+        android:gravity="center"
+
         android:textStyle="bold" />
 
     <!-- Segunda columna -->
     <TextView
-        android:id="@+id/horarioParaderoTextView"
+        android:id="@+id/horarioRetornoTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"

@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import pe.carlos.undcbusestudiante.R;
-import pe.carlos.undcbusestudiante.Salida;
+import pe.carlos.undcbusestudiante.Class.Salida;
 
 public class SalidaAdapter extends RecyclerView.Adapter<SalidaAdapter.SalidaViewHolder>  {
 

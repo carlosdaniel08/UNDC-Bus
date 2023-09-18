@@ -18,6 +18,8 @@
       android:textColor="@color/White"
       android:text="Agregar Ruta" />
 
+
+
   <androidx.recyclerview.widget.RecyclerView
       android:id="@+id/recyclerViewRutas"
       android:layout_width="match_parent"
