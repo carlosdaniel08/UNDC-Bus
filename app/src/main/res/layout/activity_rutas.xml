@@ -16,16 +16,14 @@
       android:background="@drawable/boton_rojo"
       android:fontFamily="@font/robotobold"
       android:textColor="@color/White"
-      android:text="Agregar Ruta" />
-
-
+      android:text="Agregar horario" />
 
   <androidx.recyclerview.widget.RecyclerView
       android:id="@+id/recyclerViewRutas"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:layout_below="@id/agregarRutaButton"
-      android:layout_marginTop="16dp"
+      android:layout_marginTop="15dp"
       app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
 </RelativeLayout>

@@ -18,41 +18,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UndcBusEstudiante"
         tools:targetApi="31">
-        <activity
-            android:name=".AgregarRetornoActivity"
-            android:exported="false" />
-        <activity
-            android:name=".AgregarSalidaActivity"
-            android:exported="false" />
-        <activity
-            android:name=".RutaDetalleActivity"
-            android:exported="false" />
-        <activity
-            android:name=".RutasActivity"
-            android:exported="false" />
+
         <activity
             android:name=".HorariosActivity"
             android:exported="false" />
         <activity
-            android:name=".RutaActivity"
-            android:exported="false" />
-        <activity
-            android:name=".HorariosEstudianteActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Administrador.AddEditRutaActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Administrador.AddEditHorarioActivity"
+            android:name=".RutasActivity"
             android:exported="false" />
         <activity
             android:name=".Administrador.AdministradorActivity"
             android:exported="false" /> <!-- Declaración del servicio LocationService -->
         <service android:name=".LocationService" />
 
-        <activity
-            android:name=".Administrador.RutaHorariosActivity"
-            android:exported="false" />
         <activity
             android:name=".TicketActivity"
             android:exported="false" />

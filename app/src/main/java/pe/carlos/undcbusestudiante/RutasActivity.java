@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +18,8 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -27,6 +30,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import pe.carlos.undcbusestudiante.Adapter.RutasAdapter;
+
+import pe.carlos.undcbusestudiante.Administrador.AdministradorActivity;
 import pe.carlos.undcbusestudiante.Class.Retorno;
 import pe.carlos.undcbusestudiante.Class.Ruta;
 import pe.carlos.undcbusestudiante.Class.Salida;
@@ -53,6 +58,17 @@ public class RutasActivity extends AppCompatActivity {
 
 
 
+
+
+        mostrarBoton();
+
+        cargarRutasDesdeFirebase();
+    }
+
+    private void mostrarBoton() {
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        DatabaseReference usersRef = FirebaseDatabase.getInstance().getReference("users");
+
         Button agregarRutaButton = findViewById(R.id.agregarRutaButton);
         agregarRutaButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,7 +77,24 @@ public class RutasActivity extends AppCompatActivity {
             }
         });
 
-        cargarRutasDesdeFirebase();
+        usersRef.child(currentUser.getUid()).child("TipoUsuario").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if ("ADMINISTRADOR".equals(dataSnapshot.getValue(String.class))) {
+                    agregarRutaButton.setVisibility(View.VISIBLE);
+                } else {
+                    agregarRutaButton.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Toast.makeText(RutasActivity.this, "Error al obtener el tipo de usuario", Toast.LENGTH_SHORT).show();
+                finish();
+            }
+        });
+
+
     }
 
     // Método para cargar las rutas desde Firebase y actualizar el RecyclerView
@@ -87,7 +120,7 @@ public class RutasActivity extends AppCompatActivity {
     // Método para mostrar el diálogo para agregar una nueva ruta
     private void mostrarDialogoAgregarRuta() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Agregar nueva ruta");
+        builder.setTitle("Agregar nuevo horario");
 
         // Infla el diseño personalizado del diálogo
         View viewInflated = LayoutInflater.from(this).inflate(R.layout.dialog_agregar_ruta, null);

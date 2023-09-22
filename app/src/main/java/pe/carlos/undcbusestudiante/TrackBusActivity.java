@@ -7,6 +7,7 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
 import android.os.Looper;
+import android.util.Log;
 import android.view.View;
 import android.widget.Switch;
 import android.widget.Toast;
@@ -27,6 +28,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -216,7 +218,19 @@ public class TrackBusActivity extends AppCompatActivity implements OnMapReadyCal
                         UserLocation userLocation = locationSnapshot.getValue(UserLocation.class);
                         if (userLocation != null) {
                             LatLng latLng = new LatLng(userLocation.getLatitude(), userLocation.getLongitude());
-                            googleMap.addMarker(new MarkerOptions().position(latLng));
+
+
+
+
+                            MarkerOptions markerOptions = new MarkerOptions()
+                                    .position(latLng)
+                                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.busmarker))
+                                    .anchor(0.5f, 0.5f);
+
+
+
+                            googleMap.addMarker(markerOptions);
+
                         }
                     }
                 }

@@ -12,6 +12,7 @@ public class Ruta {
 
 
 
+
     public void setSalidas(List<Salida> salidas) {
         this.salidas = salidas;
     }

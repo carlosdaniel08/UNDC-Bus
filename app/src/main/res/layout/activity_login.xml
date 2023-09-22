@@ -16,10 +16,10 @@
         android:orientation="vertical">
 
         <ImageView
-            android:src="@drawable/person_raising_hand_color_light"
             android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_height="100dp"
             android:scaleType="centerCrop"
+            android:src="@drawable/horizontal_traffic_light_flat"
             tools:ignore="ExtraText" />
 
         <TextView

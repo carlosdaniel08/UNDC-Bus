@@ -20,7 +20,7 @@ import pe.carlos.undcbusestudiante.Class.Retorno;
 public class RutasAdapter extends RecyclerView.Adapter<RutasAdapter.RutaViewHolder> {
 
     private List<Ruta> rutas = new ArrayList<>();
-    private List<Salida> salidas = new ArrayList<>(); // Agrega esta lista para el SalidaAdapter
+    private List<Salida> salidas = new ArrayList<>();
     private List<Retorno> retornos = new ArrayList<>();
 
     public void setRutas(List<Ruta> rutas) {
@@ -32,6 +32,7 @@ public class RutasAdapter extends RecyclerView.Adapter<RutasAdapter.RutaViewHold
     @Override
     public RutaViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_ruta, parent, false);
+
         return new RutaViewHolder(view);
     }
 
@@ -56,6 +57,7 @@ public class RutasAdapter extends RecyclerView.Adapter<RutasAdapter.RutaViewHold
         holder.recyclerViewRetornos.setLayoutManager(new LinearLayoutManager(holder.itemView.getContext()));
         holder.recyclerViewRetornos.setAdapter(retornoAdapter);
 
+
     }
 
     @Override
@@ -73,12 +75,12 @@ public class RutasAdapter extends RecyclerView.Adapter<RutasAdapter.RutaViewHold
         public RutaViewHolder(View itemView) {
             super(itemView);
 
-            // Inicializa elementos de interfaz aquí
+            // Inicializa elementos de interfaz
             nombreTextView = itemView.findViewById(R.id.nombreTextView);
             turnoTextView = itemView.findViewById(R.id.turnoTextView);
             puntoRecojoTextView = itemView.findViewById(R.id.puntoRecojoTextView);
-            recyclerViewSalidas = itemView.findViewById(R.id.recyclerViewSalidas); // Asegúrate de tener este ID en tu diseño XML
             recyclerViewRetornos = itemView.findViewById(R.id.recyclerViewRetornos);
+            recyclerViewSalidas = itemView.findViewById(R.id.recyclerViewSalidas);
 
         }
     }

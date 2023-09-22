@@ -78,6 +78,8 @@ public class AdministradorActivity extends AppCompatActivity {
             }
         });
 
+
+
     }
 
     private String obtenerSaludoSegunHora() {
@@ -86,21 +88,23 @@ public class AdministradorActivity extends AppCompatActivity {
         Calendar calendar = Calendar.getInstance();
         int hora = calendar.get(Calendar.HOUR_OF_DAY);
         int imageResId;
+        String saludo;
 
         if (hora >= 0 && hora < 12) {
             imageResId = R.drawable.sun_behind_small_cloud_color;
-            imageView.setImageResource(imageResId);
-            return "Buenos días";
+            saludo = "Buenos días";
         } else if (hora >= 12 && hora < 18) {
             imageResId = R.drawable.sun_with_face_color;
-            imageView.setImageResource(imageResId);
-            return "Buenas tardes";
+            saludo = "Buenas tardes";
         } else {
             imageResId = R.drawable.full_moon_face_color;
-            imageView.setImageResource(imageResId);
-            return "Buenas noches";
+            saludo = "Buenas noches";
         }
+
+        imageView.setImageResource(imageResId);
+        return saludo;
     }
+
 
     private void consultarUsuarioFirebase() {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();

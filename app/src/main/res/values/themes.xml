@@ -17,4 +17,10 @@
         <item name="android:textSize">18sp</item>
     </style>
 
+    <style name="AlertDialogButtonStyle">
+        <!-- Cambia el color de texto de los botones -->
+        <item name="android:textColor">@color/Rojo</item>
+    </style>
+
+
 </resources>

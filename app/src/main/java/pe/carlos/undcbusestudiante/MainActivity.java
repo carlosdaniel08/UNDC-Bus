@@ -4,7 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.Network;
+import android.net.NetworkCapabilities;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -57,14 +61,14 @@ public class MainActivity extends AppCompatActivity {
         ImageView imageView = findViewById(R.id.imageView);
 
 //        // Verificar la conectividad a Internet al iniciar la actividad
-//        if (isConnectedToInternet()) {
-//            // La aplicación tiene conexión a Internet
-//            Toast.makeText(this, "La aplicación tiene conexión a Internet", Toast.LENGTH_SHORT).show();
-//        } else {
-//            // La aplicación no tiene conexión a Internet
-//            Toast.makeText(this, "La aplicación no tiene conexión a Internet", Toast.LENGTH_SHORT).show();
-//            finish();// Finalizar la actividad si no hay conexión
-//        }
+      if (isConnectedToInternet()) {
+           // La aplicación tiene conexión a Internet
+          Toast.makeText(this, "La aplicación tiene conexión a Internet", Toast.LENGTH_SHORT).show();
+       } else {
+          // La aplicación no tiene conexión a Internet
+         Toast.makeText(this, "La aplicación no tiene conexión a Internet", Toast.LENGTH_SHORT).show();
+          finish();// Finalizar la actividad si no hay conexión
+       }
 
 
 
@@ -83,8 +87,8 @@ public class MainActivity extends AppCompatActivity {
         cvRutas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // Intent intent = new Intent(MainActivity.this, HorariosEstudianteActivity.class);
-               // startActivity(intent);
+               Intent intent = new Intent(MainActivity.this, RutasActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -104,15 +108,15 @@ public class MainActivity extends AppCompatActivity {
         trace.stop();
     }
 
-//    private boolean isConnectedToInternet() {
-//        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-//        Network network = connectivityManager.getActiveNetwork();
-//        if (network != null) {
-//            NetworkCapabilities networkCapabilities = connectivityManager.getNetworkCapabilities(network);
-//            return networkCapabilities != null && networkCapabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET);
-//        }
-//        return false;
-//    }
+    private boolean isConnectedToInternet() {
+       ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+     Network network = connectivityManager.getActiveNetwork();
+     if (network != null) {
+          NetworkCapabilities networkCapabilities = connectivityManager.getNetworkCapabilities(network);
+         return networkCapabilities != null && networkCapabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET);
+      }
+       return false;
+    }
 
     @Override
     protected void onStart() {
@@ -134,21 +138,23 @@ public class MainActivity extends AppCompatActivity {
         Calendar calendar = Calendar.getInstance();
         int hora = calendar.get(Calendar.HOUR_OF_DAY);
         int imageResId;
+        String saludo;
 
         if (hora >= 0 && hora < 12) {
             imageResId = R.drawable.sun_behind_small_cloud_color;
-            imageView.setImageResource(imageResId);
-            return "Buenos días";
+            saludo = "Buenos días";
         } else if (hora >= 12 && hora < 18) {
             imageResId = R.drawable.sun_with_face_color;
-            imageView.setImageResource(imageResId);
-            return "Buenas tardes";
+            saludo = "Buenas tardes";
         } else {
             imageResId = R.drawable.full_moon_face_color;
-            imageView.setImageResource(imageResId);
-            return "Buenas noches";
+            saludo = "Buenas noches";
         }
+
+        imageView.setImageResource(imageResId);
+        return saludo;
     }
+
 
 
     private void consultarUsuarioFirebase() {

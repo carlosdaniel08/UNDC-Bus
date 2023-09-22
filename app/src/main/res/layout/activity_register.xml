@@ -5,176 +5,172 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    tools:context=".RegisterActivity"
-    android:padding="20dp">
-
     <LinearLayout
-        android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp"
+        tools:context=".RegisterActivity">
 
-        <ImageView
-            android:src="@drawable/backhand_index_pointing_down_color_light"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:scaleType="centerCrop"
-            tools:ignore="ExtraText" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/identification_card_color"
+                tools:ignore="ExtraText" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/robotobold"
+                android:gravity="center"
+                android:text="¡Crea tu cuenta!"
+                android:textColor="@color/Verde"
+                android:textSize="30sp" />
+
+        </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/robotobold"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/robotoregular"
             android:gravity="center"
-            android:text="¡Crea tu cuenta!"
-            android:textColor="@color/Verde"
-            android:textSize="30sp" />
+            android:text="Por favor rellena los siguientes\ndatos para su nueva cuenta"
+            android:textColor="@color/Black" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutCorreoInstitucional"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:hint="Correo institucional">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtCorreoInstitucional"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:autofillHints="emailAddress"
+                android:background="@drawable/edt"
+                android:drawableStart="@drawable/e_mail_color"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/robotoregular"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textSize="17sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Nombre">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtNombre"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:autofillHints="name"
+                android:background="@drawable/edt"
+                android:drawableStart="@drawable/person_color_light"
+                android:drawablePadding="8dp"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textSize="17sp"></com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutContrasena"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Contraseña">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtContrasena"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:autofillHints="password"
+                android:background="@drawable/edt"
+                android:drawableEnd="@drawable/see_no_evil_monkey_color"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textSize="17sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/robotoregular"
+            android:gravity="center"
+            android:text="Selecciona tu tipo de usuario:"
+            android:textColor="@color/Black" />
+
+        <Spinner
+            android:id="@+id/spTipoUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edt"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:prompt="@string/tipo_usuario_hint"
+            android:textSize="17sp" />
+
+        <Spinner
+            android:id="@+id/spTipoBus"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edt"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:prompt="@string/spinner_prompt"
+            android:textSize="17sp"
+            android:visibility="gone" />
+
+
+        <CheckBox
+            android:id="@+id/cbTerminosCondiciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:autoLink="web"
+            android:linksClickable="true"
+            android:padding="8dp"
+            android:text="@string/terms_and_conditions"></CheckBox>
+
+        <Button
+            android:id="@+id/btnRegistrar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/boton"
+            android:fontFamily="@font/robotobold"
+            android:text="Registrarme"
+            android:textColor="@color/White"
+            android:textSize="16sp"></Button>
+
 
     </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/robotoregular"
-        android:gravity="center"
-        android:text="Por favor rellena los siguientes\ndatos para su nueva cuenta"
-        android:textColor="@color/Black" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayoutCorreoInstitucional"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="55dp"
-        android:hint="Correo institucional">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtCorreoInstitucional"
-            android:background="@drawable/edt"
-            android:layout_width="match_parent"
-            android:fontFamily="@font/robotoregular"
-            android:layout_height="60dp"
-            android:textSize="17sp"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
-            android:inputType="textEmailAddress"
-            android:drawableStart="@drawable/e_mail_color"
-            android:drawablePadding="8dp"
-            android:imeOptions="actionNext"
-            android:maxLines="1"
-            android:autofillHints="emailAddress" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayoutNombre"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:hint="Nombre">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtNombre"
-            android:background="@drawable/edt"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:textSize="17sp"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
-            android:inputType="textPersonName"
-            android:drawableStart="@drawable/person_color_light"
-            android:drawablePadding="8dp"
-            android:imeOptions="actionNext"
-            android:maxLines="1"
-            android:autofillHints="name"
-            >
-        </com.google.android.material.textfield.TextInputEditText>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayoutContrasena"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:hint="Contraseña">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtContrasena"
-            android:background="@drawable/edt"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:textSize="17sp"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
-            android:inputType="textPassword"
-            android:drawableEnd="@drawable/see_no_evil_monkey_color"
-            android:imeOptions="actionDone"
-            android:maxLines="1"
-            android:autofillHints="password" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/robotoregular"
-        android:gravity="center"
-        android:text="Selecciona tu tipo de usuario:"
-        android:textColor="@color/Black" />
-
-    <Spinner
-        android:layout_marginTop="10dp"
-        android:id="@+id/spTipoUsuario"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@drawable/edt"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:prompt="@string/tipo_usuario_hint"
-        android:textSize="17sp" />
-
-    <Spinner
-        android:layout_marginTop="10dp"
-        android:id="@+id/spTipoBus"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@drawable/edt"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:prompt="@string/spinner_prompt"
-        android:textSize="17sp"
-        android:visibility="gone" />
-
-
-    <CheckBox
-        android:id="@+id/cbTerminosCondiciones"
-        android:padding="8dp"
-        android:layout_marginTop="28dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:linksClickable="true"
-        android:autoLink="web"
-        android:text="@string/terms_and_conditions">
-    </CheckBox>
-
-    <Button
-        android:id="@+id/btnRegistrar"
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@drawable/boton"
-        android:text="Registrarme"
-        android:textSize="16sp"
-        android:fontFamily="@font/robotobold"
-        android:textColor="@color/White">
-    </Button>
-
-
-
-</LinearLayout>
 </androidx.core.widget.NestedScrollView>
