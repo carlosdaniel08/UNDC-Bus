@@ -46,7 +46,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="55dp"
-
         android:hint="Correo institucional">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -84,7 +83,7 @@
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
             android:inputType="textPassword"
-            android:imeOptions="actionDone"
+            android:imeOptions="actionNext"
             android:maxLines="1"
             android:autofillHints="password"/>
 
@@ -124,6 +123,7 @@
         android:gravity="center"
         android:text="Ingresar"
         android:textColor="@color/White"
+        android:imeOptions="actionDone"
         android:textSize="17sp" />
 
     <TextView

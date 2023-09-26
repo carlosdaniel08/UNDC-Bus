@@ -85,23 +85,27 @@
 
     <TextView
         android:id="@+id/tvNombre"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Nombre"
+
         android:fontFamily="@font/robotobold"
         android:textColor="@color/Verde"
         android:textSize="25sp"
-        android:layout_marginStart="30dp" />
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        />
 
     <TextView
         android:id="@+id/tvCorreoInstitucional"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Correo Institucional"
         android:fontFamily="@font/robotoregular"
         android:textColor="@color/Black"
-
-        android:layout_marginStart="30dp" />
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+         />
 
     <TextView
         android:id="@+id/tvUsuario"
@@ -111,7 +115,8 @@
         android:fontFamily="@font/robotobold"
         android:textColor="@color/Black"
         android:textSize="18sp"
-        android:layout_marginStart="30dp" />
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"/>
 
     <TextView
         android:id="@+id/tvTipoBus"

@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -8,16 +13,16 @@
 
     <EditText
         android:id="@+id/nombreEditText"
-        android:background="@drawable/edt"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:fontFamily="@font/robotoregular"
-        android:textSize="17sp"
-        android:drawablePadding="10dp"
+        android:background="@drawable/edt"
         android:drawableStart="@drawable/memo_flat"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/robotoregular"
+        android:hint="Nombre de la ruta"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
-        android:hint="Nombre de la Ruta" />
+        android:textSize="17sp" />
 
     <EditText
         android:id="@+id/turnoEditText"
@@ -45,7 +50,7 @@
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         android:layout_marginTop="10dp"
-        android:hint="Punto de Recojo" />
+        android:hint="Punto de recojo" />
 
     <!-- LinearLayout para agregar paraderos y horarios dinámicamente -->
     <LinearLayout
@@ -83,3 +88,4 @@
 
 
 </LinearLayout>
+    </ScrollView>

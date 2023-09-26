@@ -131,11 +131,15 @@ public class TrackBusActivity extends AppCompatActivity implements OnMapReadyCal
     private void activateSharing() {
         cvCompartirUbicacion.setCardBackgroundColor(ContextCompat.getColor(this, R.color.Verde));
         switchOnlineOffline.setTextColor(ContextCompat.getColor(this, R.color.White));
+        Intent serviceIntent = new Intent(this, LocationForegroundService.class);
+        startForegroundService(serviceIntent);
     }
 
     private void deactivateSharing() {
         cvCompartirUbicacion.setCardBackgroundColor(ContextCompat.getColor(this, R.color.White));
         switchOnlineOffline.setTextColor(ContextCompat.getColor(this, R.color.Verde));
+        Intent serviceIntent = new Intent(this, LocationForegroundService.class);
+        stopService(serviceIntent);
     }
 
     private void removeUserLocationFromMap() {

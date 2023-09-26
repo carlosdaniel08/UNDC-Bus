@@ -57,6 +57,7 @@
         android:layout_height="wrap_content"
         android:text="Permiso de localización"
         android:fontFamily="@font/robotobold"
+        android:textColor="@color/Black"
         android:textSize="24sp" />
 
     <TextView

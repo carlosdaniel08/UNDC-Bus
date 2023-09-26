@@ -56,10 +56,6 @@ public class RutasActivity extends AppCompatActivity {
 
         databaseReference = FirebaseDatabase.getInstance().getReference("rutas");
 
-
-
-
-
         mostrarBoton();
 
         cargarRutasDesdeFirebase();

@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:padding="10dp"
+    android:background="@color/BackgroundVerde"
     tools:context=".RutasActivity">
 
   <Button
@@ -23,7 +24,7 @@
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:layout_below="@id/agregarRutaButton"
-      android:layout_marginTop="15dp"
+      android:layout_marginTop="14dp"
       app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
 </RelativeLayout>

@@ -1,30 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="@drawable/trazado"
     android:padding="16dp">
 
+    <TextView
+        android:background="@color/Verde"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="RUTA"
+        android:textColor="@color/White"
+        android:fontFamily="@font/robotobold" />
+
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TextView
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ruta: "
-            android:textStyle="bold" />
+            android:text="Nombre de ruta: "
+
+            />
 
         <TextView
             android:id="@+id/nombreTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textStyle="bold" />
+             />
 
     </LinearLayout>
 
@@ -65,55 +83,24 @@
     </LinearLayout>
 
     <TextView
+        android:background="@color/Verde"
+        android:textColor="@color/White"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
         android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="SALIDA"
-        android:layout_marginTop="15dp"
-        android:textStyle="bold"/>
-
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:stretchColumns="*">
-        <!-- Encabezado -->
-        <TableRow
-            android:background="@color/Verde">
-            <!-- Primera columna -->
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="PARADERO"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:textColor="#FFFFFF" />
-
-            <!-- Segunda columna -->
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="HORARIO"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:textColor="#FFFFFF" />
-        </TableRow>
-    </TableLayout>
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewSalidas"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:fontFamily="@font/robotobold"
+        android:text="HORARIO"
+        android:textStyle="bold" />
 
     <TextView
-        android:gravity="center"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="RETORNO"
-        android:layout_marginTop="15dp"
-        android:textStyle="bold"/>
+        android:gravity="center"
+        android:text="SALIDA"
+        android:fontFamily="@font/robotobold"
+        android:textColor="@color/Black" />
 
     <TableLayout
         android:layout_width="match_parent"
@@ -129,7 +116,7 @@
                 android:layout_weight="1"
                 android:text="PARADERO"
                 android:gravity="center"
-                android:textStyle="bold"
+                android:fontFamily="@font/robotobold"
                 android:textColor="#FFFFFF" />
 
             <!-- Segunda columna -->
@@ -139,7 +126,50 @@
                 android:layout_weight="1"
                 android:text="HORARIO"
                 android:gravity="center"
-                android:textStyle="bold"
+                android:fontFamily="@font/robotobold"
+                android:textColor="#FFFFFF" />
+        </TableRow>
+    </TableLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewSalidas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RETORNO"
+        android:fontFamily="@font/robotobold"
+        android:textColor="@color/Black"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+        <!-- Encabezado -->
+        <TableRow
+            android:background="@color/Rojo">
+            <!-- Primera columna -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PARADERO"
+                android:gravity="center"
+                android:fontFamily="@font/robotobold"
+                android:textColor="#FFFFFF" />
+
+            <!-- Segunda columna -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="HORARIO"
+                android:gravity="center"
+                android:fontFamily="@font/robotobold"
                 android:textColor="#FFFFFF" />
         </TableRow>
     </TableLayout>
@@ -149,4 +179,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+
 </LinearLayout>
+</androidx.cardview.widget.CardView>

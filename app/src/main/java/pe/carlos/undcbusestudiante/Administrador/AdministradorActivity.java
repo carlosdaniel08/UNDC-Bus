@@ -58,15 +58,6 @@ public class AdministradorActivity extends AppCompatActivity {
         // Consultar usuario de Firebase
         consultarUsuarioFirebase();
 
-        cvRutas = findViewById(R.id.cvRutas);
-        cvRutas.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-             //   Intent intent = new Intent(AdministradorActivity.this, AddEditRutaActivity.class);
-              //  startActivity(intent);
-
-            }
-        });
 
         cvHorarios = findViewById(R.id.cvHorarios);
         cvHorarios.setOnClickListener(new View.OnClickListener() {
