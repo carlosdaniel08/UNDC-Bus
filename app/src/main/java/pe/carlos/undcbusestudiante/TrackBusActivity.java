@@ -41,6 +41,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 public class TrackBusActivity extends AppCompatActivity implements OnMapReadyCallback {
 
+
+
     private static final int REQUEST_LOCATION_PERMISSION = 1;
 
     private FusedLocationProviderClient fusedLocationClient;
@@ -220,21 +222,20 @@ public class TrackBusActivity extends AppCompatActivity implements OnMapReadyCal
                     DataSnapshot locationSnapshot = userSnapshot.child("location");
                     if (locationSnapshot.exists()) {
                         UserLocation userLocation = locationSnapshot.getValue(UserLocation.class);
+                        String nombre = userSnapshot.child("Nombre").getValue(String.class); // Extraer el nombre
+                        String tipoBus = userSnapshot.child("TipoBus").getValue(String.class); // Extraer el tipo de bus
+
                         if (userLocation != null) {
                             LatLng latLng = new LatLng(userLocation.getLatitude(), userLocation.getLongitude());
 
-
-
-
                             MarkerOptions markerOptions = new MarkerOptions()
                                     .position(latLng)
+                                    .title(tipoBus) // Usar el título combinado para el marcador
+                                    .snippet(nombre)
                                     .icon(BitmapDescriptorFactory.fromResource(R.drawable.busmarker))
                                     .anchor(0.5f, 0.5f);
 
-
-
                             googleMap.addMarker(markerOptions);
-
                         }
                     }
                 }

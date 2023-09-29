@@ -90,8 +90,8 @@ public class LocationForegroundService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         Notification notification = new NotificationCompat.Builder(this, CHANNEL_ID)
-                .setContentTitle("Location Service")
-                .setContentText("Running...")
+                .setContentTitle("Ubicacion en segundo plano")
+                .setContentText("Compartiendo...")
                 .setSmallIcon(R.drawable.horizontal_traffic_light_flat)
                 .build();
 
