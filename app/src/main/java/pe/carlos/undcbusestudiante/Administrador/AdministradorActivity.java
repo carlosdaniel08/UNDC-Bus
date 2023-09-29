@@ -22,8 +22,10 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.Calendar;
 
 import pe.carlos.undcbusestudiante.LoginActivity;
+import pe.carlos.undcbusestudiante.MainActivity;
 import pe.carlos.undcbusestudiante.R;
 import pe.carlos.undcbusestudiante.RutasActivity;
+import pe.carlos.undcbusestudiante.TrackBusActivity;
 
 public class AdministradorActivity extends AppCompatActivity {
 
@@ -31,7 +33,7 @@ public class AdministradorActivity extends AppCompatActivity {
     private TextView tvNombre;
     private TextView tvCorreoInstitucional;
     private TextView tvUsuario, tvTipoBus;
-    private CardView cvHorarios, cvRutas;
+    private CardView cvHorarios, cvMapa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,8 +65,18 @@ public class AdministradorActivity extends AppCompatActivity {
         cvHorarios.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    Intent intent = new Intent(AdministradorActivity.this, RutasActivity.class);
-                   startActivity(intent);
+                Intent intent = new Intent(AdministradorActivity.this, RutasActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        cvMapa = findViewById(R.id.cvMapa);
+        cvMapa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AdministradorActivity.this, TrackBusActivity.class);
+                startActivity(intent);
 
             }
         });

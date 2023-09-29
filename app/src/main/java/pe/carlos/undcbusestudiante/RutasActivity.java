@@ -76,7 +76,8 @@ public class RutasActivity extends AppCompatActivity {
         usersRef.child(currentUser.getUid()).child("TipoUsuario").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                if ("ADMINISTRADOR".equals(dataSnapshot.getValue(String.class))) {
+                String userType = dataSnapshot.getValue(String.class);
+                if ("ADMINISTRADOR".equals(userType) || "CONDUCTOR".equals(userType)) {
                     agregarRutaButton.setVisibility(View.VISIBLE);
                 } else {
                     agregarRutaButton.setVisibility(View.GONE);
@@ -137,64 +138,33 @@ public class RutasActivity extends AppCompatActivity {
         agregarRetornoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Inflar un nuevo layout con dos EditText para la salida
-                View nuevaSalidaView = LayoutInflater.from(RutasActivity.this).inflate(R.layout.layout_nuevo_paradero_salida, null);
-                retornosLayout.addView(nuevaSalidaView);
+                agregarNuevaSalida(retornosLayout);
             }
         });
 
-        // Manejar la adición dinámica de paraderos y horarios
         agregarParaderoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Inflar un nuevo layout con dos EditText para el paradero y el horario
-                View nuevoParaderoView = LayoutInflater.from(RutasActivity.this).inflate(R.layout.layout_nuevo_paradero, null);
-                paraderosLayout.addView(nuevoParaderoView);
+                agregarNuevoParadero(paraderosLayout);
             }
         });
 
         builder.setPositiveButton("Agregar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                String nombre = nombreEditText.getText().toString();
-                String turno = turnoEditText.getText().toString();
-                String puntoRecojo = puntoRecojoEditText.getText().toString();
+                String nombre = nombreEditText.getText().toString().trim();
+                String turno = turnoEditText.getText().toString().trim();
+                String puntoRecojo = puntoRecojoEditText.getText().toString().trim();
 
-                // Validación de entrada de datos (puedes agregar más validaciones)
-                if (!nombre.isEmpty() && !turno.isEmpty() && !puntoRecojo.isEmpty()) {
-                    // Crea una nueva instancia de la clase Ruta con los datos ingresados
+                if (isValidInput(nombre, turno, puntoRecojo)) {
                     Ruta nuevaRuta = new Ruta(nombre, turno, puntoRecojo);
-
-                    // Recupera y agrega los paraderos y horarios ingresados dinámicamente
-                    for (int i = 0; i < paraderosLayout.getChildCount(); i++) {
-                        View paraderoView = paraderosLayout.getChildAt(i);
-                        EditText paraderoEditText = paraderoView.findViewById(R.id.paraderoEditText);
-                        EditText horarioEditText = paraderoView.findViewById(R.id.horarioEditText);
-                        String paradero = paraderoEditText.getText().toString();
-                        String horario = horarioEditText.getText().toString();
-
-                        if (!paradero.isEmpty() && !horario.isEmpty()) {
-                            nuevaRuta.agregarSalida(new Salida(paradero, horario));
-                        }
+                    if (agregarInfoARuta(paraderosLayout, nuevaRuta, true) && agregarInfoARuta(retornosLayout, nuevaRuta, false)) {
+                        guardarRutaEnFirebase(nuevaRuta);
+                    } else {
+                        showToast(getString(R.string.error_message));
                     }
-
-                    // Obtener los datos de los retornos ingresados dinámicamente
-                    for (int i = 0; i < retornosLayout.getChildCount(); i++) {
-                        View retornoView = retornosLayout.getChildAt(i);
-                        EditText paraderoEditText = retornoView.findViewById(R.id.paraderoEditText);
-                        EditText horarioEditText = retornoView.findViewById(R.id.horarioEditText);
-                        String paradero = paraderoEditText.getText().toString();
-                        String horario = horarioEditText.getText().toString();
-
-                        if (!paradero.isEmpty() && !horario.isEmpty()) {
-                            nuevaRuta.agregarRetorno(new Retorno(paradero, horario));
-                        }
-                    }
-
-                    // Guarda la nueva ruta en Firebase (debes implementar esta parte)
-                    guardarRutaEnFirebase(nuevaRuta);
                 } else {
-                    Toast.makeText(RutasActivity.this, "Por favor, completa todos los campos", Toast.LENGTH_SHORT).show();
+                    showToast(getString(R.string.error_message));
                 }
             }
         });
@@ -207,6 +177,45 @@ public class RutasActivity extends AppCompatActivity {
         });
 
         builder.show();
+    }
+
+    private void agregarNuevaSalida(LinearLayout layout) {
+        View nuevaSalidaView = LayoutInflater.from(RutasActivity.this).inflate(R.layout.layout_nuevo_paradero_salida, null);
+        layout.addView(nuevaSalidaView);
+    }
+
+    private void agregarNuevoParadero(LinearLayout layout) {
+        View nuevoParaderoView = LayoutInflater.from(RutasActivity.this).inflate(R.layout.layout_nuevo_paradero, null);
+        layout.addView(nuevoParaderoView);
+    }
+
+    private boolean isValidInput(String nombre, String turno, String puntoRecojo) {
+        return !nombre.isEmpty() && !turno.isEmpty() && !puntoRecojo.isEmpty() && nombre.length() > 2;
+    }
+
+    private boolean agregarInfoARuta(LinearLayout layout, Ruta ruta, boolean isSalida) {
+        for (int i = 0; i < layout.getChildCount(); i++) {
+            View view = layout.getChildAt(i);
+            EditText paraderoEditText = view.findViewById(R.id.paraderoEditText);
+            EditText horarioEditText = view.findViewById(R.id.horarioEditText);
+            String paradero = paraderoEditText.getText().toString().trim();
+            String horario = horarioEditText.getText().toString().trim();
+
+            if (!paradero.isEmpty() && !horario.isEmpty()) {
+                if (isSalida) {
+                    ruta.agregarSalida(new Salida(paradero, horario));
+                } else {
+                    ruta.agregarRetorno(new Retorno(paradero, horario));
+                }
+            } else {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private void showToast(String message) {
+        Toast.makeText(RutasActivity.this, message, Toast.LENGTH_SHORT).show();
     }
 
     private void guardarRutaEnFirebase(Ruta nuevaRuta) {

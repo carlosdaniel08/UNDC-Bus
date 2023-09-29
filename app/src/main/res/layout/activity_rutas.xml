@@ -17,7 +17,7 @@
       android:background="@drawable/boton_rojo"
       android:fontFamily="@font/robotobold"
       android:textColor="@color/White"
-      android:text="Agregar horario" />
+      android:text="Agregar" />
 
   <androidx.recyclerview.widget.RecyclerView
       android:id="@+id/recyclerViewRutas"

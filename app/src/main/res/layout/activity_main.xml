@@ -83,12 +83,12 @@
     </LinearLayout>
 
 <LinearLayout
+    android:layout_marginTop="15dp"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <TextView
-        android:gravity="right"
         android:id="@+id/tvNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -97,8 +97,7 @@
         android:textColor="@color/Verde"
         android:textSize="25sp"
         android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        />
+        android:layout_marginRight="30dp" />
 
 </LinearLayout>
 
@@ -107,7 +106,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     <TextView
-        android:gravity="right"
         android:id="@+id/tvCorreoInstitucional"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
