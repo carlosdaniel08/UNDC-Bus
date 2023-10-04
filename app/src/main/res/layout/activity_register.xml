@@ -46,11 +46,21 @@
             android:text="Por favor rellena los siguientes\ndatos para su nueva cuenta"
             android:textColor="@color/Black" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/robotoregular"
+            android:gravity="center"
+            android:textSize="10dp"
+            android:text="(Recuerda que tendrás que validar tu cuenta institucional para poder ingresar)"
+            android:textColor="@color/Black" />
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayoutCorreoInstitucional"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="55dp"
+            android:layout_marginTop="40dp"
             android:hint="Correo institucional">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -158,18 +168,19 @@
             android:autoLink="web"
             android:linksClickable="true"
             android:padding="8dp"
-            android:text="@string/terms_and_conditions"></CheckBox>
+            android:text="@string/terms_and_conditions" />
 
         <Button
             android:id="@+id/btnRegistrar"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             android:background="@drawable/boton"
             android:fontFamily="@font/robotobold"
             android:text="Registrarme"
             android:textColor="@color/White"
-            android:textSize="16sp"></Button>
+            android:textSize="16sp" />
 
 
     </LinearLayout>

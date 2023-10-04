@@ -127,7 +127,7 @@
             android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ver buses"
+            android:text="Buses cercanos"
             android:fontFamily="@font/robotobold"
             android:textColor="@color/Black"
             android:textSize="18sp"
@@ -162,7 +162,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Ir a los horarios"
+                    android:text="Ver buses"
                     android:textColor="@color/Black"
                     android:gravity="center"
                     android:layout_marginStart="30dp"
@@ -209,12 +209,12 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Ir a los horarios"
-                    android:textColor="@color/Black"
-                    android:gravity="center"
                     android:layout_marginStart="30dp"
                     android:layout_marginEnd="30dp"
-                    android:layout_marginBottom="10dp"/>
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:text="Rutas y horarios"
+                    android:textColor="@color/Black" />
 
             </LinearLayout>
 
@@ -258,7 +258,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Ir a enviar notificaciones"
+                    android:text="Enviar notificaciones"
                     android:textColor="@color/Black"
                     android:gravity="center"
                     android:layout_marginStart="30dp"
