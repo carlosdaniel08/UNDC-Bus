@@ -25,6 +25,7 @@ import pe.carlos.undcbusestudiante.LoginActivity;
 import pe.carlos.undcbusestudiante.MainActivity;
 import pe.carlos.undcbusestudiante.R;
 import pe.carlos.undcbusestudiante.RutasActivity;
+import pe.carlos.undcbusestudiante.SendNotificationActivity;
 import pe.carlos.undcbusestudiante.TrackBusActivity;
 
 public class AdministradorActivity extends AppCompatActivity {
@@ -33,7 +34,7 @@ public class AdministradorActivity extends AppCompatActivity {
     private TextView tvNombre;
     private TextView tvCorreoInstitucional;
     private TextView tvUsuario, tvTipoBus;
-    private CardView cvHorarios, cvMapa;
+    private CardView cvHorarios, cvMapa, cvNotifaciones;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,6 +82,14 @@ public class AdministradorActivity extends AppCompatActivity {
             }
         });
 
+        cvNotifaciones = findViewById(R.id.cvNotificaciones);
+        cvNotifaciones.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AdministradorActivity.this, SendNotificationActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
     }

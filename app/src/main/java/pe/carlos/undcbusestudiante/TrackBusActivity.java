@@ -188,7 +188,11 @@ public class TrackBusActivity extends AppCompatActivity implements OnMapReadyCal
             DatabaseReference userLocationRef = usersLocationRef
                     .child(uid)
                     .child("location");
-            UserLocation userLocation = new UserLocation(location.getLatitude(), location.getLongitude());
+            UserLocation userLocation = new UserLocation(
+                    location.getLatitude(),
+                    location.getLongitude()
+
+            );
             userLocationRef.setValue(userLocation);
         }
     }
@@ -230,12 +234,13 @@ public class TrackBusActivity extends AppCompatActivity implements OnMapReadyCal
 
                             MarkerOptions markerOptions = new MarkerOptions()
                                     .position(latLng)
-                                    .title(tipoBus) // Usar el título combinado para el marcador
+                                    .title(tipoBus)
                                     .snippet(nombre)
                                     .icon(BitmapDescriptorFactory.fromResource(R.drawable.busmarker))
                                     .anchor(0.5f, 0.5f);
 
-                            googleMap.addMarker(markerOptions);
+                            Marker busMarker = googleMap.addMarker(markerOptions);
+
                         }
                     }
                 }

@@ -1,20 +1,34 @@
 package pe.carlos.undcbusestudiante;
 
+import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
+
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Context;
+
+import android.content.DialogInterface;
 import android.content.Intent;
+
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.Network;
 import android.net.NetworkCapabilities;
+
+import android.net.Uri;
 import android.os.Bundle;
+
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -23,8 +37,10 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.firebase.perf.FirebasePerformance;
 import com.google.firebase.perf.metrics.Trace;
+
 
 
 import java.text.SimpleDateFormat;
@@ -40,15 +56,18 @@ public class MainActivity extends AppCompatActivity {
     private TextView tvNombre;
     private TextView tvCorreoInstitucional;
     private TextView tvUsuario, tvTipoBus;
-    private CardView cvMapa, cvRutas;
+    private TextView txtEnviarNotificaciones;
+    private CardView cvMapa, cvRutas, cvNotifaciones;
+    private DatabaseReference mDatabase;
+    private int nVersion, versionActual;
+    private FirebaseUser currentUser;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Trace trace = FirebasePerformance.getInstance().newTrace("prueba_MainActivity");
-        trace.start();
 
 
         tvSaludo = findViewById(R.id.tvSaludo);
@@ -56,21 +75,24 @@ public class MainActivity extends AppCompatActivity {
         tvUsuario = findViewById(R.id.tvUsuario);
         tvTipoBus = findViewById(R.id.tvTipoBus);
         tvCorreoInstitucional = findViewById(R.id.tvCorreoInstitucional);
+        txtEnviarNotificaciones = findViewById(R.id.txtEnviarNotificaciones);
         String saludo = obtenerSaludoSegunHora();
         tvSaludo.setText(saludo);
         ImageView imageView = findViewById(R.id.imageView);
 
-//        // Verificar la conectividad a Internet al iniciar la actividad
+
+       mDatabase = FirebaseDatabase.getInstance().getReference("version");
+       VersionApp();
+
+
+
       if (isConnectedToInternet()) {
-           // La aplicación tiene conexión a Internet
-          Toast.makeText(this, "La aplicación tiene conexión a Internet", Toast.LENGTH_SHORT).show();
+
        } else {
-          // La aplicación no tiene conexión a Internet
-         Toast.makeText(this, "La aplicación no tiene conexión a Internet", Toast.LENGTH_SHORT).show();
+         Toast.makeText(this, "La aplicación no tiene conexión a Internet, intenta de nuevo", Toast.LENGTH_SHORT).show();
           finish();// Finalizar la actividad si no hay conexión
+
        }
-
-
 
 
         cvMapa = findViewById(R.id.cvMapa);
@@ -88,10 +110,49 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                Intent intent = new Intent(MainActivity.this, RutasActivity.class);
-                startActivity(intent);
+               startActivity(intent);
             }
         });
 
+        cvNotifaciones = findViewById(R.id.cvNotificaciones);
+        cvNotifaciones.setVisibility(View.GONE);  // Ocultar el CardView inicialmente
+        txtEnviarNotificaciones.setVisibility(View.GONE);
+
+
+        currentUser = FirebaseAuth.getInstance().getCurrentUser();
+
+        if (currentUser != null) {
+            mDatabase = FirebaseDatabase.getInstance().getReference().child("users").child(currentUser.getUid());
+
+            mDatabase.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.exists()) {
+                        String tipoUsuario = dataSnapshot.child("TipoUsuario").getValue(String.class);
+
+                        // Mostrar el CardView sólo si TipoUsuario es "CONDUCTOR"
+                        if ("CONDUCTOR".equals(tipoUsuario)) {
+                            cvNotifaciones.setVisibility(View.VISIBLE);
+                            txtEnviarNotificaciones.setVisibility(View.VISIBLE);
+
+                            cvNotifaciones.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    Intent intent = new Intent(MainActivity.this, SendNotificationActivity.class);
+                                    startActivity(intent);
+                                }
+                            });
+                        }
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+                    // Manejar error...
+                    Toast.makeText(MainActivity.this, "Error al consultar datos", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
 
         TextView tvCerrarSesion = findViewById(R.id.tvCerrarSesion);
         tvCerrarSesion.setOnClickListener(new View.OnClickListener() {
@@ -100,17 +161,65 @@ public class MainActivity extends AppCompatActivity {
                 cerrarSesion();
             }
         });
-
         // Consultar usuario de Firebase
         consultarUsuarioFirebase();
 
-        // Código a medir
-        trace.stop();
+
     }
 
+    private void VersionApp() {
+
+        try {
+            PackageInfo packageInfo = this.getPackageManager().getPackageInfo(getPackageName(),0);
+            versionActual = packageInfo.versionCode;
+
+        } catch (PackageManager.NameNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
+        mDatabase.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                nVersion = Integer.parseInt(snapshot.getValue().toString());
+            if(versionActual != nVersion){
+                ActualizarApp();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
+
+    private void ActualizarApp() {
+        new AlertDialog.Builder(this)
+                .setTitle("Actualización Requerida")
+                .setMessage("Hay una nueva versión disponible. Por favor, actualiza para continuar.")
+                .setPositiveButton("Actualizar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Redirige al usuario a la página de la aplicación en la tienda de aplicaciones
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse("market://details?id=" + getPackageName()));
+                        startActivity(intent);
+                        finish();
+                    }
+                })
+                .setNegativeButton("Salir", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+                })
+                .setIcon(R.drawable.warning_color)
+                .show();
+    }
+
+
     private boolean isConnectedToInternet() {
-       ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-     Network network = connectivityManager.getActiveNetwork();
+        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        Network network = connectivityManager.getActiveNetwork();
+
      if (network != null) {
           NetworkCapabilities networkCapabilities = connectivityManager.getNetworkCapabilities(network);
          return networkCapabilities != null && networkCapabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET);
@@ -133,6 +242,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private String obtenerSaludoSegunHora() {
+
+
+
         ImageView imageView = findViewById(R.id.imageView);
 
         Calendar calendar = Calendar.getInstance();
@@ -154,8 +266,6 @@ public class MainActivity extends AppCompatActivity {
         imageView.setImageResource(imageResId);
         return saludo;
     }
-
-
 
     private void consultarUsuarioFirebase() {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
@@ -185,8 +295,7 @@ public class MainActivity extends AppCompatActivity {
                             tvTipoBus.setVisibility(View.GONE); // Ocultar el TextView si no hay información
                         }
 
-                        // Guardar el historial con los datos del usuario
-                        guardarHistorial(userId, username, tipoUsuario);
+
 
                     }
                 }
@@ -210,16 +319,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    private void guardarHistorial(String userId, String nombreUsuario, String tipoUsuario) {
-        String fecha = obtenerFechaActual();
-        String actividad = "cvMapa"; // o "cvRutas" según corresponda
 
-        Historial historial = new Historial(fecha, actividad, userId, nombreUsuario, tipoUsuario);
-
-        DatabaseReference historialRef = FirebaseDatabase.getInstance().getReference().child("historial");
-        String nuevoHistorialKey = historialRef.push().getKey();
-        historialRef.child(nuevoHistorialKey).setValue(historial);
-    }
 
     private String obtenerFechaActual() {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());

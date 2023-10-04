@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".SendNotificationActivity">
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Para enviar una notificación, escribe el titulo y el mensaje.">
+
+    </TextView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:hint="Titulo">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextTitle"
+            android:background="@drawable/edt"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/robotoregular"
+            android:layout_height="60dp"
+            android:textSize="17sp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:inputType="textAutoComplete"
+            android:drawableStart="@drawable/e_mail_color"
+            android:drawablePadding="8dp"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mensaje">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextMessage"
+            android:background="@drawable/edt"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/robotoregular"
+            android:layout_height="100dp"
+            android:textSize="17sp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:inputType="textAutoComplete"
+            android:drawableStart="@drawable/e_mail_color"
+            android:drawablePadding="8dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:id="@+id/buttonSendNotification"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/boton"
+        android:fontFamily="@font/robotobold"
+        android:gravity="center"
+        android:textColor="@color/White"
+        android:text="Enviar notificacion" />
+
+</LinearLayout>

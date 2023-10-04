@@ -18,13 +18,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UndcBusEstudiante"
         tools:targetApi="31">
+        <activity
+            android:name=".SendNotificationActivity"
+            android:exported="false" />
 
         <service
             android:name=".LocationForegroundService"
             android:enabled="true"
             android:exported="false"
-            android:foregroundServiceType="location"/>
+            android:foregroundServiceType="location" />
 
+        <service
+            android:name=".Fcm"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
 
         <activity
             android:name=".RutasActivity"
