@@ -36,6 +36,8 @@
             </intent-filter>
         </service>
 
+        <service android:name=".SubscriptionService" />
+
         <activity
             android:name=".RutasActivity"
             android:exported="false" />

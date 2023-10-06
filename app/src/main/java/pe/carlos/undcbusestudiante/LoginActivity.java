@@ -50,6 +50,8 @@ public class LoginActivity extends AppCompatActivity {
 
         correoInstitucional = findViewById(R.id.edtCorreoInstitucional);
         editTextPassword = findViewById(R.id.edtContrasena);
+
+
         btnLogin = findViewById(R.id.btnIngresar);
         firebaseAuth = FirebaseAuth.getInstance();
         tvRegistrate = findViewById(R.id.tvRegistrate);
@@ -154,6 +156,8 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
                 String correo = correoInstitucional.getText().toString().trim();
                 String contrasena = editTextPassword.getText().toString().trim();
 
@@ -184,6 +188,8 @@ public class LoginActivity extends AppCompatActivity {
                                         @Override
                                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                                             String userType = dataSnapshot.getValue(String.class);
+                                            Intent intent = new Intent(LoginActivity.this, SubscriptionService.class);
+                                            startService(intent);
                                             Log.d("LoginActivity", "Tipo de usuario: " + userType); // Agregar este log
                                             if ("ADMINISTRADOR".equals(userType)) {
                                                 // Inicia la actividad de administrador
