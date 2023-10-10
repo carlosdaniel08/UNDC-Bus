@@ -1,4 +1,4 @@
-package pe.carlos.undcbusestudiante;
+package pe.carlos.undcbusestudiante.Activitys;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,10 +30,10 @@ import java.util.List;
 
 import pe.carlos.undcbusestudiante.Adapter.RutasAdapter;
 
-import pe.carlos.undcbusestudiante.Administrador.AdministradorActivity;
 import pe.carlos.undcbusestudiante.Class.Retorno;
 import pe.carlos.undcbusestudiante.Class.Ruta;
 import pe.carlos.undcbusestudiante.Class.Salida;
+import pe.carlos.undcbusestudiante.R;
 
 public class RutasActivity extends AppCompatActivity {
     private RecyclerView recyclerView;

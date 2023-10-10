@@ -1,4 +1,4 @@
-package pe.carlos.undcbusestudiante;
+package pe.carlos.undcbusestudiante.Activitys;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,6 +35,8 @@ import java.util.List;
 import java.util.Map;
 
 import pe.carlos.undcbusestudiante.Administrador.AdministradorActivity;
+import pe.carlos.undcbusestudiante.R;
+import pe.carlos.undcbusestudiante.Service.SubscriptionService;
 
 public class LoginActivity extends AppCompatActivity {
 

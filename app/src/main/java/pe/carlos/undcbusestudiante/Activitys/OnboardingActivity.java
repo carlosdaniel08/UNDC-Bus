@@ -1,4 +1,4 @@
-package pe.carlos.undcbusestudiante;
+package pe.carlos.undcbusestudiante.Activitys;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -20,6 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import pe.carlos.undcbusestudiante.Administrador.AdministradorActivity;
+import pe.carlos.undcbusestudiante.R;
 
 public class OnboardingActivity extends AppCompatActivity {
     private static final int REQUEST_LOCATION_PERMISSION = 1;

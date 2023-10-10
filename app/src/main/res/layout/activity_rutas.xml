@@ -13,7 +13,7 @@
     android:layout_height="match_parent"
     android:padding="10dp"
     android:background="@color/BackgroundVerde"
-    tools:context=".RutasActivity">
+    tools:context=".Activitys.RutasActivity">
 
   <Button
       android:id="@+id/agregarRutaButton"

@@ -9,7 +9,7 @@
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TrackBusActivity">
+    tools:context=".Activitys.TrackBusActivity">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/mapFragmentContainer"

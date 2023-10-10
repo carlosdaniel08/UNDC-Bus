@@ -19,7 +19,7 @@
         android:theme="@style/Theme.UndcBusEstudiante"
         tools:targetApi="31">
         <activity
-            android:name=".SendNotificationActivity"
+            android:name=".Activitys.SendNotificationActivity"
             android:exported="false" />
 
         <service
@@ -36,10 +36,10 @@
             </intent-filter>
         </service>
 
-        <service android:name=".SubscriptionService" />
+        <service android:name=".Service.SubscriptionService" />
 
         <activity
-            android:name=".RutasActivity"
+            android:name=".Activitys.RutasActivity"
             android:exported="false" />
         <activity
             android:name=".Administrador.AdministradorActivity"
@@ -47,7 +47,7 @@
         <service android:name=".Service.LocationService" />
 
         <activity
-            android:name=".TicketActivity"
+            android:name=".Activitys.TicketActivity"
             android:exported="false" />
 
         <meta-data
@@ -55,7 +55,7 @@
             android:value="AIzaSyDwamOUrPa1908hvuRdRzvdPJTAlLiZwKY" />
 
         <activity
-            android:name=".OnboardingActivity"
+            android:name=".Activitys.OnboardingActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -64,16 +64,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".TrackBusActivity"
+            android:name=".Activitys.TrackBusActivity"
             android:exported="true" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".Activitys.RegisterActivity"
             android:exported="true" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".Activitys.LoginActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Activitys.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Administrador.EstadisticasActivity"
             android:exported="true" />
     </application>
 

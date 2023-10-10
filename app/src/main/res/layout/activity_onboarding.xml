@@ -11,7 +11,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".OnboardingActivity"
+    tools:context=".Activitys.OnboardingActivity"
     android:padding="20dp">
 
     <LinearLayout

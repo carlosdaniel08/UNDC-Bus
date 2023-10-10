@@ -15,7 +15,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import pe.carlos.undcbusestudiante.R;
-import pe.carlos.undcbusestudiante.UserLocation;
+import pe.carlos.undcbusestudiante.Class.UserLocation;
 
 public class LocationForegroundService extends Service {
 

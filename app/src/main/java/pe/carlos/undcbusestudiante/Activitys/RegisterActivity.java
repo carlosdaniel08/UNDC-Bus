@@ -1,4 +1,4 @@
-package pe.carlos.undcbusestudiante;
+package pe.carlos.undcbusestudiante.Activitys;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,6 +30,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import pe.carlos.undcbusestudiante.R;
 
 public class RegisterActivity extends AppCompatActivity {
 

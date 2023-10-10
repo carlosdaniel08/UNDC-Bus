@@ -1,4 +1,4 @@
-package pe.carlos.undcbusestudiante;
+package pe.carlos.undcbusestudiante.Activitys;
 
 import android.os.Bundle;
 import android.view.View;
@@ -32,6 +32,8 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import pe.carlos.undcbusestudiante.R;
 
 public class SendNotificationActivity extends AppCompatActivity {
 

@@ -21,7 +21,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import pe.carlos.undcbusestudiante.UserLocation;
+import pe.carlos.undcbusestudiante.Class.UserLocation;
 
 public class LocationService extends Service {
 

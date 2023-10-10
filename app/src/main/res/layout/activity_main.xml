@@ -13,7 +13,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/BackgroundVerde"
-    tools:context=".MainActivity">
+    tools:context=".Activitys.MainActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardCerrarSesion"

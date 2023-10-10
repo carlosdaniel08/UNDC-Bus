@@ -1,4 +1,4 @@
-package pe.carlos.undcbusestudiante;
+package pe.carlos.undcbusestudiante.Activitys;
 
 import android.Manifest;
 import android.content.DialogInterface;
@@ -39,6 +39,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import pe.carlos.undcbusestudiante.Class.UserLocation;
+import pe.carlos.undcbusestudiante.R;
 import pe.carlos.undcbusestudiante.Service.LocationForegroundService;
 import pe.carlos.undcbusestudiante.Service.LocationService;
 

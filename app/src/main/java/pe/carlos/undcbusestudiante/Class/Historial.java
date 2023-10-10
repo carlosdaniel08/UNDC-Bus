@@ -17,6 +17,10 @@ public class Historial {
         this.accion = accion;
     }
 
+    // Constructor sin argumentos requerido por Firebase
+    public Historial() {
+    }
+
 
     public String getCorreo() {
         return correo;

@@ -1,6 +1,4 @@
-package pe.carlos.undcbusestudiante;
-
-import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
+package pe.carlos.undcbusestudiante.Activitys;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -21,14 +19,11 @@ import android.net.NetworkCapabilities;
 import android.net.Uri;
 import android.os.Bundle;
 
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -37,10 +32,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.messaging.FirebaseMessaging;
-import com.google.firebase.perf.FirebasePerformance;
-import com.google.firebase.perf.metrics.Trace;
-
 
 
 import java.text.SimpleDateFormat;
@@ -49,6 +40,7 @@ import java.util.Date;
 import java.util.Locale;
 
 import pe.carlos.undcbusestudiante.Class.Historial;
+import pe.carlos.undcbusestudiante.R;
 
 public class MainActivity extends AppCompatActivity {
 

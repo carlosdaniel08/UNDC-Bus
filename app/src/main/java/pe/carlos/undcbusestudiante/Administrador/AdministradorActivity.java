@@ -21,12 +21,11 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.Calendar;
 
-import pe.carlos.undcbusestudiante.LoginActivity;
-import pe.carlos.undcbusestudiante.MainActivity;
+import pe.carlos.undcbusestudiante.Activitys.LoginActivity;
 import pe.carlos.undcbusestudiante.R;
-import pe.carlos.undcbusestudiante.RutasActivity;
-import pe.carlos.undcbusestudiante.SendNotificationActivity;
-import pe.carlos.undcbusestudiante.TrackBusActivity;
+import pe.carlos.undcbusestudiante.Activitys.RutasActivity;
+import pe.carlos.undcbusestudiante.Activitys.SendNotificationActivity;
+import pe.carlos.undcbusestudiante.Activitys.TrackBusActivity;
 
 public class AdministradorActivity extends AppCompatActivity {
 

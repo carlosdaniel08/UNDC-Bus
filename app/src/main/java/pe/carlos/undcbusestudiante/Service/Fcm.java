@@ -19,7 +19,7 @@ import com.squareup.picasso.Picasso;
 import java.io.IOException;
 import java.util.Random;
 
-import pe.carlos.undcbusestudiante.MainActivity;
+import pe.carlos.undcbusestudiante.Activitys.MainActivity;
 import pe.carlos.undcbusestudiante.R;
 
 public class Fcm extends FirebaseMessagingService {
