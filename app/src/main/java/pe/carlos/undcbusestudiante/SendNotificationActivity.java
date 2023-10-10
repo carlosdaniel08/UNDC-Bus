@@ -18,6 +18,8 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -38,6 +40,8 @@ public class SendNotificationActivity extends AppCompatActivity {
     private Button buttonSendNotification;
     private RequestQueue myrequest;
     private String url_foto;
+    private FirebaseAuth firebaseAuth;
+    private String userName;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -49,6 +53,7 @@ public class SendNotificationActivity extends AppCompatActivity {
         buttonSendNotification = findViewById(R.id.buttonSendNotification);
 
         myrequest = Volley.newRequestQueue(getApplicationContext());
+        firebaseAuth = FirebaseAuth.getInstance();
 
         FirebaseMessaging.getInstance().subscribeToTopic("enviaratodos").addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
@@ -73,7 +78,7 @@ public class SendNotificationActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 url_foto = dataSnapshot.getValue(String.class);
-                // Ahora url_foto contiene la URL de la imagen almacenada en Firebase
+
             }
 
             @Override
@@ -81,7 +86,32 @@ public class SendNotificationActivity extends AppCompatActivity {
                 // Manejar error...
             }
         });
+
+        // Recuperar el nombre del usuario
+        fetchUserName();
     }
+
+    private void fetchUserName() {
+        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
+        if (currentUser != null) {
+            String uid = currentUser.getUid();
+            DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
+            databaseReference.child("users").child(uid).addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.exists()) {
+                        userName = dataSnapshot.child("TipoBus").getValue(String.class);
+                    }
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });
+        }
+    }
+
 
     private void sendNotification() {
         JSONObject json = new JSONObject();
@@ -92,6 +122,11 @@ public class SendNotificationActivity extends AppCompatActivity {
             notificacion.put("titulo", editTextTitle.getText().toString().trim());
             notificacion.put("detalle", editTextMessage.getText().toString().trim());
             notificacion.put("foto", url_foto);  // Utiliza url_foto obtenida de Firebase
+
+            if (userName != null) {
+                notificacion.put("senderName", userName);
+            }
+
 
             json.put("data", notificacion);
             String URL = "https://fcm.googleapis.com/fcm/send";

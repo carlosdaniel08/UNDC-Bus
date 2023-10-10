@@ -7,7 +7,6 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
 import android.os.Looper;
-import android.util.Log;
 import android.view.View;
 import android.widget.Switch;
 import android.widget.Toast;
@@ -39,6 +38,10 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import pe.carlos.undcbusestudiante.Service.LocationForegroundService;
+import pe.carlos.undcbusestudiante.Service.LocationService;
+
 public class TrackBusActivity extends AppCompatActivity implements OnMapReadyCallback {
 
 
@@ -52,6 +55,9 @@ public class TrackBusActivity extends AppCompatActivity implements OnMapReadyCal
     private Switch switchOnlineOffline;
     private Marker currentUserMarker;
     private CardView cvCompartirUbicacion;
+
+    private LatLng previousLocation = null; // Almacena la ubicación anterior
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -199,11 +205,28 @@ public class TrackBusActivity extends AppCompatActivity implements OnMapReadyCal
 
     private void showLocationOnMap(Location location) {
         LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
+
+        float rotation = 0.0f;
+        if (previousLocation != null) {
+            rotation = getBearing(previousLocation, latLng);
+        }
+        previousLocation = latLng; // Actualiza la ubicación anterior
+
         if (currentUserMarker != null) {
             currentUserMarker.setPosition(latLng);
+            currentUserMarker.setRotation(rotation); // Ajusta la rotación del marcador
         } else {
-            currentUserMarker = googleMap.addMarker(new MarkerOptions().position(latLng));
+            currentUserMarker = googleMap.addMarker(new MarkerOptions().position(latLng).rotation(rotation));
         }
+    }
+
+    private float getBearing(LatLng oldPosition, LatLng newPosition) {
+        double deltaLongitude = newPosition.longitude - oldPosition.longitude;
+        double X = Math.cos(newPosition.latitude) * Math.sin(deltaLongitude);
+        double Y = Math.cos(oldPosition.latitude) * Math.sin(newPosition.latitude) -
+                Math.sin(oldPosition.latitude) * Math.cos(newPosition.latitude) * Math.cos(deltaLongitude);
+        double bearing = Math.atan2(X, Y);
+        return (float) Math.toDegrees(bearing);
     }
 
     @Override

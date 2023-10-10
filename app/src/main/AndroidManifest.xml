@@ -23,13 +23,13 @@
             android:exported="false" />
 
         <service
-            android:name=".LocationForegroundService"
+            android:name=".Service.LocationForegroundService"
             android:enabled="true"
             android:exported="false"
             android:foregroundServiceType="location" />
 
         <service
-            android:name=".Fcm"
+            android:name=".Service.Fcm"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -44,7 +44,7 @@
         <activity
             android:name=".Administrador.AdministradorActivity"
             android:exported="false" /> <!-- Declaración del servicio LocationService -->
-        <service android:name=".LocationService" />
+        <service android:name=".Service.LocationService" />
 
         <activity
             android:name=".TicketActivity"

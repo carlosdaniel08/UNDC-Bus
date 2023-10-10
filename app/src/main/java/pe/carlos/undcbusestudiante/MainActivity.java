@@ -61,12 +61,14 @@ public class MainActivity extends AppCompatActivity {
     private DatabaseReference mDatabase;
     private int nVersion, versionActual;
     private FirebaseUser currentUser;
-
+    private DatabaseReference historialDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        historialDatabase = FirebaseDatabase.getInstance().getReference("historial");
 
 
 
@@ -99,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
         cvMapa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                guardarHistorial("Acceso a Mapa");
                 Intent intent = new Intent(MainActivity.this, TrackBusActivity.class);
                 startActivity(intent);
 
@@ -109,6 +112,7 @@ public class MainActivity extends AppCompatActivity {
         cvRutas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                guardarHistorial("Acceso a Rutas");
                Intent intent = new Intent(MainActivity.this, RutasActivity.class);
                startActivity(intent);
             }
@@ -166,6 +170,35 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    private void guardarHistorial(String accion) {
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            String idUsuario = user.getUid();
+            DatabaseReference usersRef = FirebaseDatabase.getInstance().getReference().child("users").child(idUsuario);
+
+            usersRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.exists()) {
+                        String correo = dataSnapshot.child("Correo").getValue(String.class);
+                        String nombre = dataSnapshot.child("Nombre").getValue(String.class);
+                        String tipoUsuario = dataSnapshot.child("TipoUsuario").getValue(String.class);
+                        String fecha = obtenerFechaActual();
+
+                        Historial historial = new Historial(correo, idUsuario, nombre, tipoUsuario, fecha, accion);
+                        historialDatabase.child(idUsuario).push().setValue(historial);  // Corrección aquí
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+                    Toast.makeText(MainActivity.this, "Error al consultar datos", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+    }
+
 
     private void VersionApp() {
 

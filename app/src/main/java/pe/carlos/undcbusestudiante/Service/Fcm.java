@@ -1,4 +1,4 @@
-package pe.carlos.undcbusestudiante;
+package pe.carlos.undcbusestudiante.Service;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -19,6 +19,9 @@ import com.squareup.picasso.Picasso;
 import java.io.IOException;
 import java.util.Random;
 
+import pe.carlos.undcbusestudiante.MainActivity;
+import pe.carlos.undcbusestudiante.R;
+
 public class Fcm extends FirebaseMessagingService {
 
     @Override
@@ -36,6 +39,12 @@ public class Fcm extends FirebaseMessagingService {
             String titulo = remoteMessage.getData().get("titulo");
             String detalle = remoteMessage.getData().get("detalle");
             String foto = remoteMessage.getData().get("foto");
+
+            // Extraer el nombre del emisor de la notificación
+            String senderName = remoteMessage.getData().get("senderName");
+            if (senderName != null && !senderName.isEmpty()) {
+                titulo = senderName + ": " + titulo;
+            }
 
             mayorqueoreo(titulo, detalle, foto);
         }

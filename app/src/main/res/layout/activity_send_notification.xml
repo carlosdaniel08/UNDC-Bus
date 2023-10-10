@@ -39,7 +39,7 @@
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
             android:inputType="textAutoComplete"
-            android:drawableStart="@drawable/e_mail_color"
+            android:drawableStart="@drawable/mobile_phone_with_arrow_color"
             android:drawablePadding="8dp"
             android:maxLines="1" />
 
@@ -60,7 +60,7 @@
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
             android:inputType="textAutoComplete"
-            android:drawableStart="@drawable/e_mail_color"
+
             android:drawablePadding="8dp" />
 
     </com.google.android.material.textfield.TextInputLayout>

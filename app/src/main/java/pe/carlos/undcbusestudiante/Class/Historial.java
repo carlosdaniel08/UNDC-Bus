@@ -1,21 +1,52 @@
 package pe.carlos.undcbusestudiante.Class;
 
 public class Historial {
-    private String fecha;
-    private String actividad;
-    private String userId;
-    private String nombreUsuario;
+    private String correo;
+    private String idUsuario;
+    private String nombre;
     private String tipoUsuario;
+    private String fecha;
+    private String accion;
 
-    public Historial() {
-        // Constructor vacío necesario para Firebase
+    public Historial(String correo, String idUsuario, String nombre, String tipoUsuario, String fecha, String accion) {
+        this.correo = correo;
+        this.idUsuario = idUsuario;
+        this.nombre = nombre;
+        this.tipoUsuario = tipoUsuario;
+        this.fecha = fecha;
+        this.accion = accion;
     }
 
-    public Historial(String fecha, String actividad, String userId, String nombreUsuario, String tipoUsuario) {
-        this.fecha = fecha;
-        this.actividad = actividad;
-        this.userId = userId;
-        this.nombreUsuario = nombreUsuario;
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public String getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(String idUsuario) {
+        this.idUsuario = idUsuario;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getTipoUsuario() {
+        return tipoUsuario;
+    }
+
+    public void setTipoUsuario(String tipoUsuario) {
         this.tipoUsuario = tipoUsuario;
     }
 
@@ -27,35 +58,11 @@ public class Historial {
         this.fecha = fecha;
     }
 
-    public String getActividad() {
-        return actividad;
+    public String getAccion() {
+        return accion;
     }
 
-    public void setActividad(String actividad) {
-        this.actividad = actividad;
-    }
-
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
-
-    public String getNombreUsuario() {
-        return nombreUsuario;
-    }
-
-    public void setNombreUsuario(String nombreUsuario) {
-        this.nombreUsuario = nombreUsuario;
-    }
-
-    public String getTipoUsuario() {
-        return tipoUsuario;
-    }
-
-    public void setTipoUsuario(String tipoUsuario) {
-        this.tipoUsuario = tipoUsuario;
+    public void setAccion(String accion) {
+        this.accion = accion;
     }
 }

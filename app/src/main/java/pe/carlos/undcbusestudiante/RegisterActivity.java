@@ -65,7 +65,6 @@ public class RegisterActivity extends AppCompatActivity {
         tiposBuses.add("Bus A");
         tiposBuses.add("Bus B");
         tiposBuses.add("Bus C");
-        tiposBuses.add("Bus D");
         tiposBuses.add("Bus Interprovincial");
 
         // Crear un adaptador utilizando el contexto, el layout para los elementos y la lista de valores

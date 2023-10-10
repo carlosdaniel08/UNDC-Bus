@@ -12,14 +12,15 @@
         </deviceKey>
       </Target>
     </targetSelectedWithDropDown>
-    <timeTargetWasSelectedWithDropDown value="2023-10-06T04:24:43.926670500Z" />
+    <timeTargetWasSelectedWithDropDown value="2023-10-09T21:06:56.527596500Z" />
+    <multipleDevicesSelectedInDropDown value="true" />
     <runningDeviceTargetsSelectedWithDialog>
       <Target>
         <type value="RUNNING_DEVICE_TARGET" />
         <deviceKey>
           <Key>
-            <type value="SERIAL_NUMBER" />
-            <value value="1ae98641" />
+            <type value="VIRTUAL_DEVICE_PATH" />
+            <value value="C:\Users\Carlos\.android\avd\Copia.avd" />
           </Key>
         </deviceKey>
       </Target>
