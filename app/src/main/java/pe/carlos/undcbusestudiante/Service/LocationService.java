@@ -46,7 +46,7 @@ public class LocationService extends Service {
                 if (locationResult != null) {
                     Location location = locationResult.getLastLocation();
                     if (location != null && usersLocationRef != null) {
-                        UserLocation userLocation = new UserLocation(location.getLatitude(), location.getLongitude());
+                        UserLocation userLocation = new UserLocation(location.getLatitude(), location.getLongitude(), location.getBearing() );
                         usersLocationRef.setValue(userLocation);
                     }
                 }

@@ -3,6 +3,7 @@ package pe.carlos.undcbusestudiante.Activitys;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
@@ -45,6 +46,10 @@ public class LoginActivity extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
     TextView tvRegistrate;
     private int cursorPosition = 0;
+
+
+
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -211,7 +216,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
                                     Toast.makeText(LoginActivity.this, "Por favor, verifica tu correo electrónico", Toast.LENGTH_SHORT).show();
-                                    // firebaseAuth.signOut(); // Cerrar sesión del usuario
+                                   // firebaseAuth.signOut(); // Cerrar sesión del usuario
 
 
 

@@ -3,6 +3,7 @@ package pe.carlos.undcbusestudiante.Activitys;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -41,6 +42,7 @@ public class RegisterActivity extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
     CheckBox cbTerminosCondiciones;
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,6 +85,7 @@ public class RegisterActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                 String selectedItem = parentView.getItemAtPosition(position).toString();
                 if ("CONDUCTOR".equals(selectedItem)) {
+                    Toast.makeText(RegisterActivity.this, "Disponible solo para conductores.", Toast.LENGTH_SHORT).show();
                     spTipoBus.setVisibility(View.VISIBLE); // Muestra el Spinner para el tipo de bus
                 } else {
                     spTipoBus.setVisibility(View.GONE); // Oculta el Spinner para el tipo de bus

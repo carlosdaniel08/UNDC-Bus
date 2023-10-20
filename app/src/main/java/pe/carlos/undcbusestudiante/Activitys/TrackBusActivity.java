@@ -38,6 +38,12 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import android.location.Location;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 import pe.carlos.undcbusestudiante.Class.UserLocation;
 import pe.carlos.undcbusestudiante.R;
@@ -59,7 +65,7 @@ public class TrackBusActivity extends AppCompatActivity implements OnMapReadyCal
     private CardView cvCompartirUbicacion;
 
     private LatLng previousLocation = null; // Almacena la ubicación anterior
-
+    private Map<String, Marker> markersMap = new HashMap<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -198,37 +204,32 @@ public class TrackBusActivity extends AppCompatActivity implements OnMapReadyCal
                     .child("location");
             UserLocation userLocation = new UserLocation(
                     location.getLatitude(),
-                    location.getLongitude()
-
+                    location.getLongitude(),
+                    location.getBearing()  // Guarda la rotación aquí
             );
             userLocationRef.setValue(userLocation);
         }
     }
 
+
     private void showLocationOnMap(Location location) {
         LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
-
-        float rotation = 0.0f;
-        if (previousLocation != null) {
-            rotation = getBearing(previousLocation, latLng);
-        }
-        previousLocation = latLng; // Actualiza la ubicación anterior
+        float rotation = location.getBearing();  // Usa location.getBearing() aquí
 
         if (currentUserMarker != null) {
             currentUserMarker.setPosition(latLng);
-            currentUserMarker.setRotation(rotation); // Ajusta la rotación del marcador
+            currentUserMarker.setRotation(rotation);  // Ajusta la rotación del marcador
         } else {
-            currentUserMarker = googleMap.addMarker(new MarkerOptions().position(latLng).rotation(rotation));
+            FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+            String uid = currentUser != null ? currentUser.getUid() : null;
+            if (uid != null && !markersMap.containsKey(uid)) {
+                // Solo añade el marcador del usuario actual si no hay un marcador existente en markersMap
+                MarkerOptions markerOptions = new MarkerOptions()
+                        .position(latLng)
+                        .rotation(rotation);  // Añade la rotación aquí
+                currentUserMarker = googleMap.addMarker(markerOptions);
+            }
         }
-    }
-
-    private float getBearing(LatLng oldPosition, LatLng newPosition) {
-        double deltaLongitude = newPosition.longitude - oldPosition.longitude;
-        double X = Math.cos(newPosition.latitude) * Math.sin(deltaLongitude);
-        double Y = Math.cos(oldPosition.latitude) * Math.sin(newPosition.latitude) -
-                Math.sin(oldPosition.latitude) * Math.cos(newPosition.latitude) * Math.cos(deltaLongitude);
-        double bearing = Math.atan2(X, Y);
-        return (float) Math.toDegrees(bearing);
     }
 
     @Override
@@ -245,30 +246,54 @@ public class TrackBusActivity extends AppCompatActivity implements OnMapReadyCal
         usersLocationRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                googleMap.clear();
+                Set<String> keysToRemove = new HashSet<>(markersMap.keySet());
 
                 for (DataSnapshot userSnapshot : dataSnapshot.getChildren()) {
                     DataSnapshot locationSnapshot = userSnapshot.child("location");
                     if (locationSnapshot.exists()) {
                         UserLocation userLocation = locationSnapshot.getValue(UserLocation.class);
-                        String nombre = userSnapshot.child("Nombre").getValue(String.class); // Extraer el nombre
-                        String tipoBus = userSnapshot.child("TipoBus").getValue(String.class); // Extraer el tipo de bus
+
+                        String nombre = userSnapshot.child("Nombre").getValue(String.class);
+                        String tipoBus = userSnapshot.child("TipoBus").getValue(String.class);
+                        String userId = userSnapshot.getKey();
 
                         if (userLocation != null) {
                             LatLng latLng = new LatLng(userLocation.getLatitude(), userLocation.getLongitude());
+                            float userRotation = userLocation.getRotation();  // Obtén la rotación aquí
 
-                            MarkerOptions markerOptions = new MarkerOptions()
-                                    .position(latLng)
-                                    .title(tipoBus)
-                                    .snippet(nombre)
-                                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.busmarker))
-                                    .anchor(0.5f, 0.5f);
+                            if (markersMap.containsKey(userId)) {
+                                // Actualizar el marcador existente
+                                Marker existingMarker = markersMap.get(userId);
+                                existingMarker.setPosition(latLng);
+                                existingMarker.setRotation(userRotation);
+                                existingMarker.setTitle(tipoBus);
+                                existingMarker.setSnippet(nombre);
+                                keysToRemove.remove(userId);
 
-                            Marker busMarker = googleMap.addMarker(markerOptions);
-
+                            } else {
+                                // Agregar un nuevo marcador
+                                MarkerOptions markerOptions = new MarkerOptions()
+                                        .position(latLng)
+                                        .title(tipoBus)
+                                        .snippet(nombre)
+                                        .rotation(userRotation)
+                                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.busmarkerdos))
+                                        .anchor(0.5f, 0.5f);
+                                Marker newMarker = googleMap.addMarker(markerOptions);
+                                markersMap.put(userId, newMarker);
+                            }
                         }
                     }
                 }
+
+                // Eliminar marcadores que ya no están en Firebase
+                for (String keyToRemove : keysToRemove) {
+                    Marker markerToRemove = markersMap.remove(keyToRemove);
+                    if (markerToRemove != null) {
+                        markerToRemove.remove();
+                    }
+                }
+
                 if (!switchOnlineOffline.isChecked()) {
                     removeUserLocationFromMap();
                 }
@@ -279,6 +304,7 @@ public class TrackBusActivity extends AppCompatActivity implements OnMapReadyCal
                 // Handle error
             }
         });
+
     }
 
     @Override

@@ -1,4 +1,4 @@
-package pe.carlos.undcbusestudiante;
+package pe.carlos.undcbusestudiante.Adapter;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;

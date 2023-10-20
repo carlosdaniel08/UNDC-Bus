@@ -49,7 +49,8 @@ public class LocationForegroundService extends Service {
                         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
 
                         // Crea un objeto con la latitud y longitud.
-                        UserLocation userLocation = new UserLocation(location.getLatitude(), location.getLongitude());
+                        UserLocation userLocation = new UserLocation(location.getLatitude(), location.getLongitude(), location.getBearing());
+
 
                         // Guarda la ubicación en Firebase.
                         databaseReference.child("users").child(uid).child("location").setValue(userLocation);
