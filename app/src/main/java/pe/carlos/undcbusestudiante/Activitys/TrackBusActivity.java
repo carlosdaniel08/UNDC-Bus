@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.os.Looper;
 import android.view.View;
 import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -57,6 +58,7 @@ import pe.carlos.undcbusestudiante.Service.LocationService;
 
 public class TrackBusActivity extends AppCompatActivity implements OnMapReadyCallback {
 
+    private boolean popupShown = false;
     private static final int REQUEST_LOCATION_PERMISSION = 1;
     private FusedLocationProviderClient fusedLocationClient;
     private LocationCallback locationCallback;
@@ -140,14 +142,29 @@ public class TrackBusActivity extends AppCompatActivity implements OnMapReadyCal
     private void handleSwitchChange() {
         switchOnlineOffline.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
+                // El switch está activado, el usuario está compartiendo ubicación
+                updateCompartiendoUbicacion(true);
                 activateSharing();
                 startLocationUpdates();
             } else {
+                // El switch está desactivado, el usuario ya no está compartiendo ubicación
+                updateCompartiendoUbicacion(false);
                 deactivateSharing();
                 stopLocationUpdates();
                 removeUserLocationFromMap();
             }
         });
+    }
+
+    private void updateCompartiendoUbicacion(boolean compartiendo) {
+        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
+
+        if (currentUser != null) {
+            String uid = currentUser.getUid();
+            DatabaseReference userRef = usersLocationRef.child(uid);
+            userRef.child("compartiendoUbicacion").setValue(compartiendo);
+        }
     }
 
     private void activateSharing() {
@@ -269,41 +286,38 @@ public class TrackBusActivity extends AppCompatActivity implements OnMapReadyCal
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(initialLocation, 12f));
         busTrail = googleMap.addPolyline(new PolylineOptions().width(10).color(Color.GREEN));
 
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            return;
+        if (checkLocationPermission()) {
+            googleMap.setMyLocationEnabled(true);
         }
-        googleMap.setMyLocationEnabled(true);
 
         usersLocationRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Set<String> keysToRemove = new HashSet<>(markersMap.keySet());
-                boolean anyBusAvailable = false;  // Variable para detectar si algún bus está disponible
-
+                List<String> busNames = new ArrayList<>();
 
                 for (DataSnapshot userSnapshot : dataSnapshot.getChildren()) {
                     DataSnapshot locationSnapshot = userSnapshot.child("location");
-                    if (locationSnapshot.exists()) {
-                        UserLocation userLocation = locationSnapshot.getValue(UserLocation.class);
+                    Boolean compartiendoUbicacion = userSnapshot.child("compartiendoUbicacion").getValue(Boolean.class);
 
+                    if (compartiendoUbicacion != null && compartiendoUbicacion && locationSnapshot.exists()) {
+                        UserLocation userLocation = locationSnapshot.getValue(UserLocation.class);
                         String nombre = userSnapshot.child("Nombre").getValue(String.class);
                         String tipoBus = userSnapshot.child("TipoBus").getValue(String.class);
                         String userId = userSnapshot.getKey();
 
                         if (userLocation != null) {
-
                             LatLng latLng = new LatLng(userLocation.getLatitude(), userLocation.getLongitude());
                             float userRotation = userLocation.getRotation();
 
-                            if (markersMap.containsKey(userId)) {
+                            Marker existingMarker = markersMap.get(userId);
+                            if (existingMarker != null) {
                                 // Actualizar el marcador existente
-                                Marker existingMarker = markersMap.get(userId);
                                 existingMarker.setPosition(latLng);
                                 existingMarker.setRotation(userRotation);
                                 existingMarker.setTitle(tipoBus);
                                 existingMarker.setSnippet(nombre);
                                 keysToRemove.remove(userId);
-
                             } else {
                                 // Agregar un nuevo marcador
                                 MarkerOptions markerOptions = new MarkerOptions()
@@ -316,8 +330,21 @@ public class TrackBusActivity extends AppCompatActivity implements OnMapReadyCal
                                 Marker newMarker = googleMap.addMarker(markerOptions);
                                 markersMap.put(userId, newMarker);
                             }
+                            // Agregar el nombre del bus a la lista si está compartiendo ubicación
+                            busNames.add(tipoBus);
                         }
+                    } else {
+                        // El bus no está compartiendo ubicación o no hay ubicación disponible
+                        // Elimina el marcador si existe
+                        String userId = userSnapshot.getKey();
+                        keysToRemove.remove(userId);
                     }
+                }
+
+                // Mostrar la ventana emergente solo si no se ha mostrado previamente
+                if (!popupShown && !busNames.isEmpty()) {
+                    showBusLocationsPopup(busNames);
+                    popupShown = true; // Marcar la ventana emergente como mostrada
                 }
 
                 // Eliminar marcadores que ya no están en Firebase
@@ -338,7 +365,45 @@ public class TrackBusActivity extends AppCompatActivity implements OnMapReadyCal
                 // Handle error
             }
         });
+    }
 
+    private boolean checkLocationPermission() {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
+                && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+            return true;
+        } else {
+            // Solicitar permiso de ubicación si no se ha otorgado
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCATION_PERMISSION);
+            return false;
+        }
+    }
+
+
+    private void showBusLocationsPopup(List<String> busNames) {
+        View popupView = getLayoutInflater().inflate(R.layout.popup_bus_locations, null);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(popupView);
+
+        TextView textViewBusList = popupView.findViewById(R.id.textViewBusList);
+
+        if (busNames.isEmpty()) {
+            textViewBusList.setText("No hay buses compartiendo ubicación.");
+        } else {
+            StringBuilder busList = new StringBuilder();
+            for (String busName : busNames) {
+                busList.append(busName).append("\n");
+            }
+            textViewBusList.setText(busList.toString().trim());
+        }
+
+        builder.setPositiveButton("Cerrar", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                dialog.dismiss();
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 
     @Override
