@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.location.Location;
 import android.os.Bundle;
 import android.os.Looper;
@@ -31,6 +32,8 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.Polyline;
+import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -38,10 +41,12 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import android.location.Location;
 
+
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -52,10 +57,7 @@ import pe.carlos.undcbusestudiante.Service.LocationService;
 
 public class TrackBusActivity extends AppCompatActivity implements OnMapReadyCallback {
 
-
-
     private static final int REQUEST_LOCATION_PERMISSION = 1;
-
     private FusedLocationProviderClient fusedLocationClient;
     private LocationCallback locationCallback;
     private GoogleMap googleMap;
@@ -63,9 +65,13 @@ public class TrackBusActivity extends AppCompatActivity implements OnMapReadyCal
     private Switch switchOnlineOffline;
     private Marker currentUserMarker;
     private CardView cvCompartirUbicacion;
-
     private LatLng previousLocation = null; // Almacena la ubicación anterior
     private Map<String, Marker> markersMap = new HashMap<>();
+    private Polyline busTrail;
+    private List<LatLng> busTrailPoints = new ArrayList<>();
+    private List<Long> busTrailTimestamps = new ArrayList<>();
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -183,7 +189,7 @@ public class TrackBusActivity extends AppCompatActivity implements OnMapReadyCal
         }
 
         LocationRequest locationRequest = LocationRequest.create()
-                .setInterval(1000) // Intervalo de actualización en milisegundos
+                .setInterval(500) // Intervalo de actualización en milisegundos
                 .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
 
         fusedLocationClient.requestLocationUpdates(locationRequest, locationCallback, Looper.getMainLooper());
@@ -205,7 +211,7 @@ public class TrackBusActivity extends AppCompatActivity implements OnMapReadyCal
             UserLocation userLocation = new UserLocation(
                     location.getLatitude(),
                     location.getLongitude(),
-                    location.getBearing()  // Guarda la rotación aquí
+                    location.getBearing()
             );
             userLocationRef.setValue(userLocation);
         }
@@ -214,22 +220,46 @@ public class TrackBusActivity extends AppCompatActivity implements OnMapReadyCal
 
     private void showLocationOnMap(Location location) {
         LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
-        float rotation = location.getBearing();  // Usa location.getBearing() aquí
+        float rotation = location.getBearing();
 
         if (currentUserMarker != null) {
             currentUserMarker.setPosition(latLng);
-            currentUserMarker.setRotation(rotation);  // Ajusta la rotación del marcador
+            currentUserMarker.setRotation(rotation);
         } else {
             FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
             String uid = currentUser != null ? currentUser.getUid() : null;
             if (uid != null && !markersMap.containsKey(uid)) {
-                // Solo añade el marcador del usuario actual si no hay un marcador existente en markersMap
+
                 MarkerOptions markerOptions = new MarkerOptions()
                         .position(latLng)
-                        .rotation(rotation);  // Añade la rotación aquí
+                        .rotation(rotation);
                 currentUserMarker = googleMap.addMarker(markerOptions);
             }
         }
+
+        if (busTrail != null) {
+            long currentTime = System.currentTimeMillis();
+            busTrailPoints.add(latLng);
+            busTrailTimestamps.add(currentTime);
+            updateBusTrail();
+        }
+    }
+
+    private void updateBusTrail() {
+        long thirtyMinutesInMillis = 30 * 60 * 1000;
+        long currentTime = System.currentTimeMillis();
+        List<LatLng> recentPoints = new ArrayList<>();
+
+        for (int i = busTrailPoints.size() - 1; i >= 0; i--) {
+            if (currentTime - busTrailTimestamps.get(i) <= thirtyMinutesInMillis) {
+                recentPoints.add(0, busTrailPoints.get(i));
+            } else {
+                busTrailPoints.remove(i);
+                busTrailTimestamps.remove(i);
+            }
+        }
+
+        busTrail.setPoints(recentPoints);
     }
 
     @Override
@@ -237,6 +267,7 @@ public class TrackBusActivity extends AppCompatActivity implements OnMapReadyCal
         googleMap = map;
         LatLng initialLocation = new LatLng(-13.0673491, -76.3287982);
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(initialLocation, 12f));
+        busTrail = googleMap.addPolyline(new PolylineOptions().width(10).color(Color.GREEN));
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             return;
@@ -247,6 +278,8 @@ public class TrackBusActivity extends AppCompatActivity implements OnMapReadyCal
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Set<String> keysToRemove = new HashSet<>(markersMap.keySet());
+                boolean anyBusAvailable = false;  // Variable para detectar si algún bus está disponible
+
 
                 for (DataSnapshot userSnapshot : dataSnapshot.getChildren()) {
                     DataSnapshot locationSnapshot = userSnapshot.child("location");
@@ -258,8 +291,9 @@ public class TrackBusActivity extends AppCompatActivity implements OnMapReadyCal
                         String userId = userSnapshot.getKey();
 
                         if (userLocation != null) {
+
                             LatLng latLng = new LatLng(userLocation.getLatitude(), userLocation.getLongitude());
-                            float userRotation = userLocation.getRotation();  // Obtén la rotación aquí
+                            float userRotation = userLocation.getRotation();
 
                             if (markersMap.containsKey(userId)) {
                                 // Actualizar el marcador existente

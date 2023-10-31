@@ -5,11 +5,15 @@ public class UserLocation {
     private double longitude;
     private float rotation;
 
+
+
+
     public UserLocation(double latitude, double longitude, float rotation) {
         this.latitude = latitude;
         this.longitude = longitude;
         this.rotation = rotation;
     }
+
 
     public float getRotation() {
         return rotation;
