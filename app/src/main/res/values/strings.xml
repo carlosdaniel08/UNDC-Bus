@@ -2,7 +2,8 @@
     <string name="app_name">UNDC BUS</string>
 
     <string name="tipo_usuario_hint">Seleccione tu tipo de usuario</string>
-    <string name="terms_and_conditions">Al crear mi cuenta acepto los <a href="terms_activity://">https://bus.undc.edu.pe/index.php/politica-de-privacidad/</a></string>
+
+    <string name="terms_and_conditions">Al crear mi cuenta acepto los términos y condiciones <a href="terms_activity://">https://bus.undc.edu.pe/?page_id=988039</a></string>
 
     <string name="firebase_error_invalid_email">La dirección de correo electrónico es inválida.</string>
     <string name="firebase_error_wrong_password">La contraseña es incorrecta.</string>

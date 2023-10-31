@@ -57,12 +57,13 @@ public class RegisterActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         cbTerminosCondiciones = findViewById(R.id.cbTerminosCondiciones);
 
+
         // Crear una lista de elementos para el Spinner
         List<String> tiposUsuarios = new ArrayList<>();
         tiposUsuarios.add("ESTUDIANTE");
         tiposUsuarios.add("DOCENTE");
         tiposUsuarios.add("ADMINISTRATIVO");
-        tiposUsuarios.add("CONDUCTOR");
+       // tiposUsuarios.add("CONDUCTOR");
 
         // Crear una lista de elementos para el Spinner de bus
         List<String> tiposBuses = new ArrayList<>();
