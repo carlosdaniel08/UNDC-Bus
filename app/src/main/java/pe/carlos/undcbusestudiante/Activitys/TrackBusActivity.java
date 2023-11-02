@@ -275,7 +275,6 @@ public class TrackBusActivity extends AppCompatActivity implements OnMapReadyCal
                 busTrailTimestamps.remove(i);
             }
         }
-
         busTrail.setPoints(recentPoints);
     }
 

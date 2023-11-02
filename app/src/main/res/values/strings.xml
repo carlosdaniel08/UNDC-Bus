@@ -11,6 +11,7 @@
     <string name="firebase_error_email_already_in_use">Esta dirección de correo electrónico ya está en uso.</string>
     <string name="firebase_error_weak_password">La contraseña es débil. Debe tener al menos 6 caracteres.</string>
     <string name="firebase_error_network_error">Error de red. Por favor, verifica tu conexión a internet.</string>
+
     <string name="spinner_prompt">Selecciona el tipo de bus</string>
 
     <string-array name="turnos">
@@ -19,9 +20,9 @@
         <item>Noche</item>
         <item>Otro</item>
     </string-array>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="error_message">Por favor, completa todos los campos</string>
-
 
 </resources>
