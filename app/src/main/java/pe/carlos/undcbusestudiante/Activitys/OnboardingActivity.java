@@ -7,8 +7,11 @@ import androidx.core.content.ContextCompat;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -38,7 +41,19 @@ public class OnboardingActivity extends AppCompatActivity {
 
         Button btnIngresar = findViewById(R.id.btnIngresar);
         btnIngresar.setOnClickListener(v -> requestLocationPermission());
+
+        TextView termsAndConditions = (TextView) findViewById(R.id.termsAndConditions);
+        termsAndConditions.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("https://bus.undc.edu.pe/?page_id=988039"));
+                startActivity(intent);
+            }
+        });
+
+
     }
+
 
     private boolean hasLocationPermission() {
         return ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED;

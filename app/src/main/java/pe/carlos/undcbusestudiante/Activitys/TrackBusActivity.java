@@ -60,6 +60,7 @@ public class TrackBusActivity extends AppCompatActivity implements OnMapReadyCal
 
     private boolean popupShown = false;
     private static final int REQUEST_LOCATION_PERMISSION = 1;
+    private boolean locationPermissionRequested = false;
     private FusedLocationProviderClient fusedLocationClient;
     private LocationCallback locationCallback;
     private GoogleMap googleMap;
@@ -72,8 +73,6 @@ public class TrackBusActivity extends AppCompatActivity implements OnMapReadyCal
     private Polyline busTrail;
     private List<LatLng> busTrailPoints = new ArrayList<>();
     private List<Long> busTrailTimestamps = new ArrayList<>();
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,6 +96,36 @@ public class TrackBusActivity extends AppCompatActivity implements OnMapReadyCal
                 }
             }
         };
+
+        // Comprueba y solicita permiso de ubicación
+        if (!checkLocationPermission()) {
+            requestLocationPermission();
+        }
+    }
+
+    private void requestLocationPermission() {
+        if (!locationPermissionRequested) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("Permiso de Ubicación");
+            builder.setMessage("Esta aplicación necesita acceso a su ubicación para proporcionar servicios de seguimiento de buses. ¿Desea otorgar el permiso de ubicación?");
+            builder.setPositiveButton("Sí", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    // Solicitar permiso de ubicación
+                    ActivityCompat.requestPermissions(TrackBusActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCATION_PERMISSION);
+                    dialog.dismiss();
+                }
+            });
+            builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            });
+            builder.show();
+
+            locationPermissionRequested = true; // Marcar que se ha solicitado el permiso
+        }
     }
 
     private void initializeViews() {
@@ -129,8 +158,6 @@ public class TrackBusActivity extends AppCompatActivity implements OnMapReadyCal
             }
         });
     }
-
-
 
     private void initializeMap() {
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.mapFragmentContainer);
@@ -329,7 +356,7 @@ public class TrackBusActivity extends AppCompatActivity implements OnMapReadyCal
                                 Marker newMarker = googleMap.addMarker(markerOptions);
                                 markersMap.put(userId, newMarker);
                             }
-                            // Agregar el nombre del bus a la lista si está compartiendo ubicación
+                           
                             busNames.add(tipoBus);
                         }
                     } else {
@@ -371,8 +398,6 @@ public class TrackBusActivity extends AppCompatActivity implements OnMapReadyCal
                 && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             return true;
         } else {
-            // Solicitar permiso de ubicación si no se ha otorgado
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCATION_PERMISSION);
             return false;
         }
     }

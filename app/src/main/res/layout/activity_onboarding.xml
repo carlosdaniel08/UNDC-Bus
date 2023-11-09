@@ -1,90 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
-    tools:context=".Activitys.OnboardingActivity"
-    android:padding="20dp">
-
     <LinearLayout
-        android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".Activitys.OnboardingActivity"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/robotobold"
+                android:text="¡Hola!"
+                android:textColor="@color/Verde"
+                android:textSize="40sp" />
+
+            <ImageView
+                android:layout_width="47dp"
+                android:layout_height="53dp"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/hand_with_fingers_splayed_color_light" />
+
+        </LinearLayout>
 
         <TextView
             android:gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:fontFamily="@font/robotobold"
-            android:text="¡Hola!"
-            android:textColor="@color/Verde"
-            android:textSize="40sp" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/robotoregular"
+            android:text="Para funcionar correctamente necesitamos algunos permisos. "
+            android:textColor="@color/Black"
+            tools:ignore="HardcodedText" />
 
         <ImageView
-            android:layout_width="47dp"
-            android:layout_height="53dp"
-            android:layout_marginLeft="8dp"
-            android:src="@drawable/hand_with_fingers_splayed_color_light" />
+            android:layout_marginTop="40dp"
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/world_map_color" />
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Divulgación destacada de localización"
+            android:fontFamily="@font/robotobold"
+            android:textColor="@color/Black"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Para mejorar tu experiencia, nuestra app requiere la localización en segundo plano para ofrecerte rutas de bus en tiempo real y notificaciones de llegada, incluso cuando la app está cerrada o no se está utilizando."
+            android:fontFamily="@font/robotoregular"
+            android:textColor="@color/Black"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Funciones que utilizan la ubicación en segundo plano: Rastreo de buses, Notificaciones de llegada."
+            android:fontFamily="@font/robotoregular"
+            android:textColor="@color/Black"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/termsAndConditions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ver Términos y Condiciones"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="right"
+            android:textColor="@color/Verde"
+            android:fontFamily="@font/robotoblack"
+            android:clickable="true"
+            android:autoLink="web"
+            tools:ignore="HardcodedText"/>
+
+        <!-- Botón de aceptación -->
+        <Button
+            android:id="@+id/btnIngresar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Aceptar y continuar"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/boton"
+            android:textColor="@color/White"/>
+
+
 
     </LinearLayout>
-
-
-    <TextView
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/robotoregular"
-        android:text="Para funcionar correctamente necesitamos algunos permisos. "
-        android:textColor="@color/Black" />
-
-    <ImageView
-        android:layout_marginTop="40dp"
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:src="@drawable/world_map_color" />
-
-    <TextView
-        android:gravity="center"
-        android:id="@+id/titleTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Permiso de localización"
-        android:fontFamily="@font/robotobold"
-        android:textColor="@color/Black"
-        android:textSize="24sp" />
-
-    <TextView
-        android:gravity="center"
-        android:id="@+id/descriptionTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Necesitamos este permiso para poder mostrarte el mapa"
-        android:textSize="16sp" />
-
-
-    <Button
-        android:id="@+id/btnIngresar"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/boton"
-        android:fontFamily="@font/robotobold"
-        android:gravity="center"
-        android:text="Comenzar"
-        android:textSize="17sp"
-        android:textColor="@color/White"/>
-
-
-</LinearLayout>
 </ScrollView>

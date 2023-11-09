@@ -128,9 +128,9 @@
         android:background="@drawable/boton"
         android:fontFamily="@font/robotobold"
         android:gravity="center"
+        android:imeOptions="actionDone"
         android:text="Ingresar"
         android:textColor="@color/White"
-        android:imeOptions="actionDone"
         android:textSize="17sp" />
 
     <TextView

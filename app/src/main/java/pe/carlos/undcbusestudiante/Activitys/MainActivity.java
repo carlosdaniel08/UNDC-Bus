@@ -62,8 +62,6 @@ public class MainActivity extends AppCompatActivity {
 
         historialDatabase = FirebaseDatabase.getInstance().getReference("historial");
 
-
-
         tvSaludo = findViewById(R.id.tvSaludo);
         tvNombre = findViewById(R.id.tvNombre);
         tvUsuario = findViewById(R.id.tvUsuario);
