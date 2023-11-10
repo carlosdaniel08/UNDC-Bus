@@ -1,0 +1,2271 @@
+{
+  "configuracion": {
+    "url_foto": "https://aula.undc.edu.pe/pluginfile.php/1/theme_moove/logo/1696965764/logoUndc.jpg"
+  },
+  "historial": {
+    "4BeNsgl5ODQ9fgR1cGySfLFpqWK2": {
+      "-NgMd453KRzbMHzEjOWL": {
+        "accion": "Acceso a Rutas",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-09",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NgMd4hgcXnKkTqNspkp": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-09",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NgRTPxoh3ixLZkPmOta": {
+        "accion": "Acceso a Rutas",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-10",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NgRTlKpLG2WqGQr70gQ": {
+        "accion": "Acceso a Rutas",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-10",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NgizmVHA_iO78xA7p2W": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-14",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ngj-OVs0_pfpYay_5kI": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-14",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ngj2PQXAObnYjeeME37": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-14",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NgkC6z0HI6zJ2uuO7cQ": {
+        "accion": "Acceso a Rutas",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-14",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NgkC89aNjUYFlRUvJOx": {
+        "accion": "Acceso a Rutas",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-14",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NgkCI7kVRAqNMisD-YX": {
+        "accion": "Acceso a Rutas",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-14",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ngln_1H3vRH815KS8U6": {
+        "accion": "Acceso a Rutas",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-15",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NhCKdCaNqD9wlTvLQO0": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NhCNxnbWmapSxoq7VjB": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NhCTXj08aK_jktmSmQN": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NhCdzIBI2gqCtHmKDUD": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NhCeTF-Bko7QZ57_GQA": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NhCelsU9UUlX8Q5QQd1": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NhCjW2cbWPZS0fpdbdX": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NhCl_syb-3DCfTtyxqX": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NhCnL8iJIJfGexQz5R1": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NhCoKtMXRUK6qbXFKYy": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NhCv8maRrQ2cDnWZHLp": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NhCwzAMQmJJ5b_d2ztH": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NhCx28CilAgZ1arbD06": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NhCy8Ni9HRChswyaUW1": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NhCyXd7iZenz6kfDXkN": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NhCybfbnV3BZYvYZ5Gy": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NhCyk8hr6jveUadvHJs": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NhCzLntROcamXTiF0eA": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NhCzbUNiIa3PB1B6Meq": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NhCzyohmFuWHQH05xsz": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NhD0SZ1LvQKMJ0ENF9r": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NhD0pIQGhjFMT7dFhWc": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NhD122fu0mbFfAsnRq9": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NhD1iushnXnGR3yu_4j": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NhDbvpWWdAM4OHOR9OH": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NhDedUtEuADUMKKzFg0": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NhDjWjJG7yPrdeEXaRC": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NhDkk54Y1Ax9rlBjRko": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NhDnyQVVtaYzu46P9Pn": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NhDoVxQxkO8g_mtc05x": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NhDpNm_C1qd0keJfKFb": {
+        "accion": "Acceso a Rutas",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NhXx23Ei2gAL8_3iZGp": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-24",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NhXx3ZybqjWryh7zDpw": {
+        "accion": "Acceso a Rutas",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-24",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Nhj2PZeY4QwKfUFDp3F": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-26",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NhsCtOnsScdfb7ZW3mN": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-28",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni69s1ZsN8-OKaW_fTW": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6AKu1af_ZNJsT3c9X": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6ARvPiocGQsOJ555U": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6AUGI_ZvGUE1K6o0Y": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6AdB9mdTOonJ0Ievv": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6AnvMVf_m1_Etxhtj": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6AwPt4TJc_5C0-r7S": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6BxVM2KtFwtdcbCpG": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6CTycteQVh8qr5o1o": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6ESYKXxOoeohFoasi": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6JL4OcJJHi1HBtKpu": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6JOteEQBHhzdW56bQ": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6JQOYWQIQbULLzSTu": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6Jnmoz_RYZtLPvMDi": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6K69eHDgDyJypYq_V": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6K7fnRZfDTtjVLCEe": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6K9_lM9qMHA0wUFc8": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6KCX2OiopnLv-tTZr": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6KdMFAEgFwrdK7Kw4": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6Kg6DSIdlrBSApJOS": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6KkD1chA-tUiXco12": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6LNs01RPXzlOXUejS": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6LObc56YPyDKGS3Bu": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6MVEC7JSVMdJ-E1Mj": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6MooVT_2EtCiJHlDo": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6NUGWerOdOzUHYUd7": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6NX9nALr7O1JYkQAY": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6NcaXegBAVeD0FVDV": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6NqYJ_mcVuAGT1T8s": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6NyQmcncEdgsojq10": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6PAtq8oEJaAtoBLtG": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6PFchqurRpGRt3Hf8": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6POuBHzQ9qjxfz_0f": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6PRRRWe1gcw7pWYHS": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6PfbL0_yR9BtPH-rZ": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6Pi9udBzUDlndZ-4W": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6Pno3SO1wODc1ra5q": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6Pw3BWNPG2tnbpj5m": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6Q43OEfE3tGa-FGtg": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6Q6510ReuZJcPLkdb": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6QE6TXlhyPpdd1UaT": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6QJtTC2QXQPKqcPHN": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6QzjTtkj1n_ajupXV": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6R4_wWrvbbz3ztWWb": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6R7w0kUwia1_qZqhV": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6RDYEUF37WqcqjXWG": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6RF5-UA3yHiP-_Krt": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ni6RPiWH3S3hz8xm80K": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumno@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+        "nombre": "Carlos",
+        "tipoUsuario": "ESTUDIANTE"
+      }
+    },
+    "57XSqSKpjiRTcyDuQ2diR6sseNV2": {
+      "-NgM_6fUVZsAhatZslWQ": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-09",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgM_l7Wx3cvhkfrOPzK": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-09",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-Ngj-ONrjWH_gc311D8d": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-14",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-Ngj22bu_8cBCtnNqB05": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-14",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-Ngj2OSxwt--FZ9Z3FuT": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-14",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgzF5zeZB32jqTQtOy_": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-17",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgzFHTbKnLgHqCJFL-8": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-17",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgzFIiQhnvfvTMeqQGW": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-17",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgzFW0WEoU8ODG3DQ-W": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-17",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgzFymWU3L_lggQ5-74": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-17",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgzGRxUTdpnRNj3Ne2M": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-17",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgzGsc7_0v2TLdJ2XZS": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-17",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgzH0QFt-7WBzk8Ymfr": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-17",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgzH3n9eD0E-GN9VJgb": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-17",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgzHXCylvnnBKQUXn-W": {
+        "accion": "Acceso a Rutas",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-17",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgzHdUs8Xxc27Rqtn1i": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-17",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgzHfPLsIbVmrgkWiiE": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-17",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgzIAYYXbFzYgTiEwzs": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-17",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgzIFxAyVnFalKtaOnr": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-17",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgzIVaX2imViDRuJ8WM": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-17",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgzLKZ1REQtJv4SwhT4": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-17",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgzLOTWojesH95jdmSG": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-17",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgzLPUQLqZOeTcuVekf": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-17",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgzNUlEhvBb0kBTAPA8": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-17",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgzNVlwtGi8qlKdlxjx": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-17",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgzNoFVxE4TBJ-GlmvX": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-17",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgzO2Ky8_XN6Mvb4Uh3": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-17",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgzOI3VzvdxNCgHsexM": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-17",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgzOMYiAQ9p5njpBX7F": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-17",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgzPhbAMUK4puWlOv7I": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-17",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgzRdoAxfhx8W9J4wxw": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-17",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgzSQ4TOJ5cmzfJG8E6": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-17",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgzSl73iqnMJHMrtnnH": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-17",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgzVUjQjliJk_i9UrGT": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-17",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgzZhBkLVXW0SghvlG-": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-17",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgzZmQTcMTEZocoNA4U": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-17",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgzZzO9KWN0F9jnRTAR": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-17",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhCJT7KBp16LOXFbqU1": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhCKFCRkLBN_IExJEeZ": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhCKP9nqpyzuLyrVb2T": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhCKW-GoPBk1DvG8fSp": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhCMH4YsCPk8pLgFpkG": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhCNibONVHpjMXZ7MX0": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhCYjo7_ACl5XQzhbMo": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhCdzVXuLbOxSEpBtlm": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhCeRWiLC_ABHp1Hm7_": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhCekDOGRHHFfffis-f": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhCjWqbZXMwlG6FDk-8": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhCkdVpcbQ4xrkLmK46": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhClad6ISL7Eiktip9A": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhCmgceW8jXfFBjdkSu": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhCmnC49F2CR9HlX1IT": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhCnPrRDqJ7ht10T76y": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhCoHpw54RNwe738FEX": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhCv0wpslIFZdFycBoh": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhCwqWIYs5KCdxF87WJ": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhCwtjpiKeCorQZgfns": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhCy9A2LZ5D-EVo6et2": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhCyYorTiUzkH39sDet": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhCyjV48au4ukVaZOUl": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhCzMz-D1tfwJdv8qpq": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhCzcCLQp8w_AqP_kUF": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhCzwq-pLjXaWIFNEat": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhD0Tw5zMn-7779bENa": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhD0eK3HRDya0dBnoOX": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhD0rXNHpZob24V7tXz": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhD130btya67p9SfPsF": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhDbSlEkBdMpw5K_j_k": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhDb_MIu9zIw7_vOo-s": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhDeedaBGrcw9S0xTV0": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhDjYCP4tZcaQfaWfBT": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhDkkrZe3KsoG_7KCFY": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhElRND0CDP9Gj_NkDj": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhEmQ4Lry8MGQWXN0N4": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhIWXvGbPAomS4e0rES": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-21",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhJqzwoGiatCOtFcGgx": {
+        "accion": "Acceso a Rutas",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-21",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhJr3t0Lgy2w8wNp8c_": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-21",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhJrCf0hJ3FCI6zI_3M": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-21",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-Ni2O1hnkyzWtsuvErd8": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-Ni68iGlxcsk8YRLByus": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-Ni69kNOL3H8U1DjTeO8": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-Ni6AYGuGarc1W7RSSVc": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-Ni6Mts2PNbHqF6Bkx87": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-Ni6NVGkHNDxD9FCBlDW": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-Ni6P9PZFMhi09-c1_GD": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-Ni6Pij_nUfCxghrtbtm": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NiFeT5yefEgOuqB65XC": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-11-02",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NiFfbvWBtaJW4ZCUuJU": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-11-02",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NibdwxIEELNIbhHB46v": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-11-07",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-Nibe5PiELGz5ypcXqsP": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-11-07",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NibepQensn9-Vg7B-lV": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-11-07",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-Nibg8xj3vYMio_sFf70": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-11-06",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NibgD0JqZLi8OldsXNX": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-11-06",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NibgJeKNAyyWpsVZvRQ": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-11-06",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NibgtOrrPzm-P9aFY5G": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor@undc.edu.pe",
+        "fecha": "2023-11-06",
+        "idUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+        "nombre": "Marlon",
+        "tipoUsuario": "CONDUCTOR"
+      }
+    },
+    "KqiHue9iORVsBbEa0u8ux7cWDdP2": {
+      "-NgVxbwM5M95_9DNmAgd": {
+        "accion": "Acceso a Mapa",
+        "correo": "1670787001@undc.edu.pe",
+        "fecha": "2023-10-11",
+        "idUsuario": "KqiHue9iORVsBbEa0u8ux7cWDdP2",
+        "nombre": "Carlos",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgW7FrBhWPXZA4yEzeo": {
+        "accion": "Acceso a Mapa",
+        "correo": "1670787001@undc.edu.pe",
+        "fecha": "2023-10-12",
+        "idUsuario": "KqiHue9iORVsBbEa0u8ux7cWDdP2",
+        "nombre": "Carlos",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgW7J8lN18J-kd3J23k": {
+        "accion": "Acceso a Rutas",
+        "correo": "1670787001@undc.edu.pe",
+        "fecha": "2023-10-12",
+        "idUsuario": "KqiHue9iORVsBbEa0u8ux7cWDdP2",
+        "nombre": "Carlos",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgW7hYHeqqr-qaiqq1b": {
+        "accion": "Acceso a Rutas",
+        "correo": "1670787001@undc.edu.pe",
+        "fecha": "2023-10-12",
+        "idUsuario": "KqiHue9iORVsBbEa0u8ux7cWDdP2",
+        "nombre": "Carlos",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgY4jOASCbSNMtZZfKX": {
+        "accion": "Acceso a Mapa",
+        "correo": "1670787001@undc.edu.pe",
+        "fecha": "2023-10-12",
+        "idUsuario": "KqiHue9iORVsBbEa0u8ux7cWDdP2",
+        "nombre": "Carlos",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NgY4lcYTtC-VsodJhPa": {
+        "accion": "Acceso a Rutas",
+        "correo": "1670787001@undc.edu.pe",
+        "fecha": "2023-10-12",
+        "idUsuario": "KqiHue9iORVsBbEa0u8ux7cWDdP2",
+        "nombre": "Carlos",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-Ni6ZYfFd8xGSukzrMVU": {
+        "accion": "Acceso a Mapa",
+        "correo": "1670787001@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "KqiHue9iORVsBbEa0u8ux7cWDdP2",
+        "nombre": "Carlos",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NictlJ902t406DhTiBu": {
+        "accion": "Acceso a Rutas",
+        "correo": "1670787001@undc.edu.pe",
+        "fecha": "2023-11-07",
+        "idUsuario": "KqiHue9iORVsBbEa0u8ux7cWDdP2",
+        "nombre": "Carlos",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NinNhjEwKzN0iGvmDho": {
+        "accion": "Acceso a Mapa",
+        "correo": "1670787001@undc.edu.pe",
+        "fecha": "2023-11-09",
+        "idUsuario": "KqiHue9iORVsBbEa0u8ux7cWDdP2",
+        "nombre": "Carlos",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NinNr18gYsOvUPoydLy": {
+        "accion": "Acceso a Rutas",
+        "correo": "1670787001@undc.edu.pe",
+        "fecha": "2023-11-09",
+        "idUsuario": "KqiHue9iORVsBbEa0u8ux7cWDdP2",
+        "nombre": "Carlos",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-Nio4J5GIQw6sDC1xDt4": {
+        "accion": "Acceso a Rutas",
+        "correo": "1670787001@undc.edu.pe",
+        "fecha": "2023-11-09",
+        "idUsuario": "KqiHue9iORVsBbEa0u8ux7cWDdP2",
+        "nombre": "Carlos",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-Nio4K_9lwAmyRItPfTi": {
+        "accion": "Acceso a Mapa",
+        "correo": "1670787001@undc.edu.pe",
+        "fecha": "2023-11-09",
+        "idUsuario": "KqiHue9iORVsBbEa0u8ux7cWDdP2",
+        "nombre": "Carlos",
+        "tipoUsuario": "CONDUCTOR"
+      }
+    },
+    "X4v7PyV48LWdw1jfE8WfxtcqlAg2": {
+      "-NglqnJdhQ69tXYcQfRT": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumnoprueba@undc.edu.pe",
+        "fecha": "2023-10-15",
+        "idUsuario": "X4v7PyV48LWdw1jfE8WfxtcqlAg2",
+        "nombre": "prueba",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NglqoqRbYTUl_jPeSsg": {
+        "accion": "Acceso a Rutas",
+        "correo": "alumnoprueba@undc.edu.pe",
+        "fecha": "2023-10-15",
+        "idUsuario": "X4v7PyV48LWdw1jfE8WfxtcqlAg2",
+        "nombre": "prueba",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-Ngz9jiMretNdPJZMxES": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumnoprueba@undc.edu.pe",
+        "fecha": "2023-10-17",
+        "idUsuario": "X4v7PyV48LWdw1jfE8WfxtcqlAg2",
+        "nombre": "prueba",
+        "tipoUsuario": "ESTUDIANTE"
+      },
+      "-NgzG8af0zog8etuF3ZS": {
+        "accion": "Acceso a Mapa",
+        "correo": "alumnoprueba@undc.edu.pe",
+        "fecha": "2023-10-17",
+        "idUsuario": "X4v7PyV48LWdw1jfE8WfxtcqlAg2",
+        "nombre": "prueba",
+        "tipoUsuario": "ESTUDIANTE"
+      }
+    },
+    "wIY4uMWzHCcYopxM2V2knYkvAVh1": {
+      "-NhD1U_dWPV5Z2HmzoWB": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor2@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "wIY4uMWzHCcYopxM2V2knYkvAVh1",
+        "nombre": "Alexander",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhD2zFFQwqKOV4dlvrN": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor2@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "wIY4uMWzHCcYopxM2V2knYkvAVh1",
+        "nombre": "Alexander",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhDbeGa18SMRsimfQpK": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor2@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "wIY4uMWzHCcYopxM2V2knYkvAVh1",
+        "nombre": "Alexander",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhDeeyWciM5G6EA1ReD": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor2@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "wIY4uMWzHCcYopxM2V2knYkvAVh1",
+        "nombre": "Alexander",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhDjX2s7qKP1wJsz8g_": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor2@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "wIY4uMWzHCcYopxM2V2knYkvAVh1",
+        "nombre": "Alexander",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-NhDkljpDNTo-vHWCQGq": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor2@undc.edu.pe",
+        "fecha": "2023-10-20",
+        "idUsuario": "wIY4uMWzHCcYopxM2V2knYkvAVh1",
+        "nombre": "Alexander",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-Ni694izNHIadEpTkJPP": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor2@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "wIY4uMWzHCcYopxM2V2knYkvAVh1",
+        "nombre": "Alexander",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-Ni69jH_EbPYPqfvmAEJ": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor2@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "wIY4uMWzHCcYopxM2V2knYkvAVh1",
+        "nombre": "Alexander",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-Ni6AZLfPdqVzaCQkOLU": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor2@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "wIY4uMWzHCcYopxM2V2knYkvAVh1",
+        "nombre": "Alexander",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-Ni6MUKZGgs0PQMkKUhU": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor2@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "wIY4uMWzHCcYopxM2V2knYkvAVh1",
+        "nombre": "Alexander",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-Ni6NY8RSUtTRpS4rCC8": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor2@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "wIY4uMWzHCcYopxM2V2knYkvAVh1",
+        "nombre": "Alexander",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-Ni6PA8gR5yzVoPWVC0l": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor2@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "wIY4uMWzHCcYopxM2V2knYkvAVh1",
+        "nombre": "Alexander",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-Ni6PlX1li7X5ir1ju0I": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor2@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "wIY4uMWzHCcYopxM2V2knYkvAVh1",
+        "nombre": "Alexander",
+        "tipoUsuario": "CONDUCTOR"
+      },
+      "-Ni6R8l3KXQuznDhgyUM": {
+        "accion": "Acceso a Mapa",
+        "correo": "conductor2@undc.edu.pe",
+        "fecha": "2023-10-31",
+        "idUsuario": "wIY4uMWzHCcYopxM2V2knYkvAVh1",
+        "nombre": "Alexander",
+        "tipoUsuario": "CONDUCTOR"
+      }
+    }
+  },
+  "rutas": {
+    "-Ng5e-gqZIewCu7TJeSH": {
+      "nombre": "N°1 - Mala",
+      "puntoRecojo": "FRENTE EL GRIFO REPSOL (CHICHARRONERIA HUAPAYA)",
+      "retornos": [
+        {
+          "horarioretorno": "1:15 p.m.",
+          "paraderoretorno": "Local CNI"
+        },
+        {
+          "horarioretorno": "1:20 p.m.",
+          "paraderoretorno": "Local Casa de la Cultura"
+        },
+        {
+          "horarioretorno": "1:25 p.m.",
+          "paraderoretorno": "Plaza de Armas San Vicente"
+        },
+        {
+          "horarioretorno": "1:35 p.m.",
+          "paraderoretorno": "San Luis"
+        },
+        {
+          "horarioretorno": "1:45 p.m.",
+          "paraderoretorno": "Cerro azul"
+        },
+        {
+          "horarioretorno": "2:10 p.m.",
+          "paraderoretorno": "Asia"
+        },
+        {
+          "horarioretorno": "2:15 p.m.",
+          "paraderoretorno": "Bujama"
+        },
+        {
+          "horarioretorno": "2:30 p.m.",
+          "paraderoretorno": "Mala"
+        }
+      ],
+      "salidas": [
+        {
+          "horariosalida": "6:45 a.m.",
+          "paraderosalida": "Mala"
+        },
+        {
+          "horariosalida": "6:55 a.m.",
+          "paraderosalida": "Bujama"
+        },
+        {
+          "horariosalida": "7:05 a.m.",
+          "paraderosalida": "Asia"
+        },
+        {
+          "horariosalida": "7:30 a.m.",
+          "paraderosalida": "Cerro Azul"
+        },
+        {
+          "horariosalida": "7:40 a.m.",
+          "paraderosalida": "San Luis"
+        },
+        {
+          "horariosalida": "7:50 a.m.",
+          "paraderosalida": "Plaza de Armas San Vicente"
+        },
+        {
+          "horariosalida": "7:55 a.m.",
+          "paraderosalida": "Local Casa de la Cultura"
+        },
+        {
+          "horariosalida": "8:00 a.m.",
+          "paraderosalida": "Local CNI"
+        }
+      ],
+      "turno": "Mañana"
+    },
+    "-Ng5iWrtICTxNkBpdBGV": {
+      "nombre": "N°1 - Mala",
+      "puntoRecojo": "FRENTE EL GRIFO REPSOL (CHICHARRONERIA HUAPAYA)",
+      "retornos": [
+        {
+          "horarioretorno": "6:20 p.m.",
+          "paraderoretorno": "Local CNI"
+        },
+        {
+          "horarioretorno": "6:25 p.m. / 10:15 p.m.",
+          "paraderoretorno": "Local Casa de la cultura"
+        },
+        {
+          "horarioretorno": "6:30 p.m. / 10:20 p.m.",
+          "paraderoretorno": "Plaza de armas San Vicente"
+        },
+        {
+          "horarioretorno": "6:34 p.m. / 10:35 p.m.",
+          "paraderoretorno": "San Luis"
+        },
+        {
+          "horarioretorno": "6:55 p.m. / 10:45 p.m.",
+          "paraderoretorno": "Cerro azul"
+        },
+        {
+          "horarioretorno": "7:25 p.m. / 11:15 p.m.",
+          "paraderoretorno": "Asia"
+        },
+        {
+          "horarioretorno": "7:30 p.m. / 11:20 p.m.",
+          "paraderoretorno": "Bujama"
+        },
+        {
+          "horarioretorno": "7:40 p.m. / 11:39 p.m.",
+          "paraderoretorno": "Mala"
+        }
+      ],
+      "salidas": [
+        {
+          "horariosalida": "4:45 p.m.",
+          "paraderosalida": "Mala"
+        },
+        {
+          "horariosalida": "4:55 p.m.",
+          "paraderosalida": "Bujama"
+        },
+        {
+          "horariosalida": "5:05 p.m.",
+          "paraderosalida": "Asia"
+        },
+        {
+          "horariosalida": "5:30 p.m.",
+          "paraderosalida": "Cerro azul"
+        },
+        {
+          "horariosalida": "5:35 p.m.",
+          "paraderosalida": "San Luis"
+        },
+        {
+          "horariosalida": "5:45 p.m.",
+          "paraderosalida": "Plaza de Armas San Vicente"
+        },
+        {
+          "horariosalida": "5:50 p.m.",
+          "paraderosalida": "Local Casa de la Cultura"
+        },
+        {
+          "horariosalida": "5:55 p.m.",
+          "paraderosalida": "Local CNI"
+        }
+      ],
+      "turno": "Tarde"
+    },
+    "-Ng5kjGKcjzrIc1AvHrN": {
+      "nombre": "N°2 - Chincha",
+      "puntoRecojo": "FRENTE A PLAZA VEA",
+      "retornos": [
+        {
+          "horarioretorno": "1:15 a.m.",
+          "paraderoretorno": "Local Casa de la cultura"
+        },
+        {
+          "horarioretorno": "1:25 p.m.",
+          "paraderoretorno": "San Vicente"
+        },
+        {
+          "horarioretorno": "1:50 p.m.",
+          "paraderoretorno": "Herbay Bajo"
+        },
+        {
+          "horarioretorno": "2:00 p.m.",
+          "paraderoretorno": "Herbay Alto"
+        },
+        {
+          "horarioretorno": "2:15 p.m.",
+          "paraderoretorno": "Nuevo Cañete"
+        },
+        {
+          "horarioretorno": "2:30 p.m.",
+          "paraderoretorno": "Nuevo Ayacucho"
+        },
+        {
+          "horarioretorno": "2:45 p.m.",
+          "paraderoretorno": "Chincha"
+        }
+      ],
+      "salidas": [
+        {
+          "horariosalida": "6:45 a.m.",
+          "paraderosalida": "Chincha"
+        },
+        {
+          "horariosalida": "7:00 a.m.",
+          "paraderosalida": "Nuevo Ayacucho"
+        },
+        {
+          "horariosalida": "7:15 a.m.",
+          "paraderosalida": "Nuevo Cañete"
+        },
+        {
+          "horariosalida": "7:25 a.m.",
+          "paraderosalida": "Herbay Alto"
+        },
+        {
+          "horariosalida": "7:40 a.m.",
+          "paraderosalida": "San Vicente"
+        },
+        {
+          "horariosalida": "7:50 a.m.",
+          "paraderosalida": "Local Casa de la cultura"
+        }
+      ],
+      "turno": "Mañana"
+    },
+    "-Ng5n6Rclx0laUYKfFQq": {
+      "nombre": "N°2 - Chincha",
+      "puntoRecojo": "FRENTE A PLAZA VEA",
+      "retornos": [
+        {
+          "horarioretorno": "10:30 p.m.",
+          "paraderoretorno": "Local Casa de la cultura"
+        },
+        {
+          "horarioretorno": "10:40 p.m.",
+          "paraderoretorno": "San Vicente"
+        },
+        {
+          "horarioretorno": "11:05 p.m.",
+          "paraderoretorno": "Herbay Bajo"
+        },
+        {
+          "horarioretorno": "11:15 p.m.",
+          "paraderoretorno": "Herbay Alto"
+        },
+        {
+          "horarioretorno": "11:30 p.m.",
+          "paraderoretorno": "Nuevo Cañete"
+        },
+        {
+          "horarioretorno": "11:45 p.m.",
+          "paraderoretorno": "Nuevo Ayacucho"
+        },
+        {
+          "horarioretorno": "11:59 p.m.",
+          "paraderoretorno": "Chincha"
+        }
+      ],
+      "salidas": [
+        {
+          "horariosalida": "4:30 p.m.",
+          "paraderosalida": "Chincha"
+        },
+        {
+          "horariosalida": "5:00 p.m.",
+          "paraderosalida": "Nuevo Ayacucho"
+        },
+        {
+          "horariosalida": "5:10 p.m.",
+          "paraderosalida": "Nuevo Cañete"
+        },
+        {
+          "horariosalida": "5:20 p.m.",
+          "paraderosalida": "Herbay Alto"
+        },
+        {
+          "horariosalida": "5:25 p.m.",
+          "paraderosalida": "Herbay Bajo"
+        },
+        {
+          "horariosalida": "5:40 p.m.",
+          "paraderosalida": "San Vicente"
+        },
+        {
+          "horariosalida": "5:50 p.m.",
+          "paraderosalida": "Local Casa de la cultura"
+        }
+      ],
+      "turno": "Tarde"
+    },
+    "-Ng5ndRAutZTGhNv7A2D": {
+      "nombre": "N°3 - Quilmana",
+      "puntoRecojo": "PLAZA DE ARMAS DE QUILMANA",
+      "retornos": [
+        {
+          "horarioretorno": "1:15 p.m.",
+          "paraderoretorno": "Local Casa de la cultura"
+        },
+        {
+          "horarioretorno": "1:25 p.m.",
+          "paraderoretorno": "Plaza de armas de Imperial"
+        },
+        {
+          "horarioretorno": "1:35 p.m.",
+          "paraderoretorno": "San Isidro"
+        },
+        {
+          "horarioretorno": "1:45 p.m.",
+          "paraderoretorno": "Plaza de armas de Quilmana"
+        }
+      ],
+      "salidas": [
+        {
+          "horariosalida": "7:25 a.m.",
+          "paraderosalida": "Plaza de armas de Quilmana"
+        },
+        {
+          "horariosalida": "7:35 a.m.",
+          "paraderosalida": "San Isidro"
+        },
+        {
+          "horariosalida": "7:45 a.m.",
+          "paraderosalida": "Plaza de armas de Imperial"
+        },
+        {
+          "horariosalida": "8:00 a.m.",
+          "paraderosalida": "Local Casa de la cultura"
+        }
+      ],
+      "turno": "Mañana"
+    },
+    "-Ng5o9Q1WlSR6l8qJmYD": {
+      "nombre": "N° 4 - Lunahuana",
+      "puntoRecojo": "S/N",
+      "retornos": [
+        {
+          "horarioretorno": "10:15 p.m.",
+          "paraderoretorno": "Local Casa de la cultura"
+        },
+        {
+          "horarioretorno": "11:00 p.m.",
+          "paraderoretorno": "San Jerónimo"
+        },
+        {
+          "horarioretorno": "11:10 p.m.",
+          "paraderoretorno": "Langla"
+        },
+        {
+          "horarioretorno": "11:30 p.m.",
+          "paraderoretorno": "Malecón Lunahuana"
+        }
+      ],
+      "salidas": [
+        {
+          "horariosalida": "11:45 a.m.",
+          "paraderosalida": "Malecón Lunahuana"
+        },
+        {
+          "horariosalida": "11:55 a.m.",
+          "paraderosalida": "Langla"
+        },
+        {
+          "horariosalida": "12:05 p.m.",
+          "paraderosalida": "San Jerónimo"
+        },
+        {
+          "horariosalida": "1:00 p.m.",
+          "paraderosalida": "Local Casa de la cultura"
+        }
+      ],
+      "turno": "Tarde"
+    },
+    "-NglngLeB7M_jmaaood0": {
+      "nombre": "prueba",
+      "puntoRecojo": "prueba",
+      "retornos": [
+        {
+          "horarioretorno": "8:30 a.m.",
+          "paraderoretorno": "prueba 2"
+        }
+      ],
+      "salidas": [
+        {
+          "horariosalida": "8:00 a.m.",
+          "paraderosalida": "prueba"
+        }
+      ],
+      "turno": "mañana"
+    }
+  },
+  "userTokens": {
+    "wIY4uMWzHCcYopxM2V2knYkvAVh1": "d3D0KfqYRh-3Y0PRduCptI:APA91bHuzuSOAbK445-EP0sda2xg8aJnQrxckyRHLJxMXKeQpat1jeUB0HSi3Gp61KjCI-dTCbW5_jiU3y--A29bVxjpVUjh7Bjx0-wJ2r0zaY6nM-Ck6bAKaZ9yElsFl3DhW3OMG3mc"
+  },
+  "users": {
+    "4BeNsgl5ODQ9fgR1cGySfLFpqWK2": {
+      "4BeNsgl5ODQ9fgR1cGySfLFpqWK2": {
+        "-NgMcFhYri3W6YdPJn3m": {
+          "accion": "Acceso a Rutas",
+          "correo": "alumno@undc.edu.pe",
+          "fecha": "2023-10-09",
+          "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+          "nombre": "Carlos",
+          "tipoUsuario": "ESTUDIANTE"
+        },
+        "-NgMct6Nb6LCMWFraQWb": {
+          "accion": "Acceso a Rutas",
+          "correo": "alumno@undc.edu.pe",
+          "fecha": "2023-10-09",
+          "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+          "nombre": "Carlos",
+          "tipoUsuario": "ESTUDIANTE"
+        },
+        "-NgMcuPA1KCIQcVhLrX-": {
+          "accion": "Acceso a Mapa",
+          "correo": "alumno@undc.edu.pe",
+          "fecha": "2023-10-09",
+          "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+          "nombre": "Carlos",
+          "tipoUsuario": "ESTUDIANTE"
+        },
+        "-NgMcwjs-GLJ9INv8e_-": {
+          "accion": "Acceso a Rutas",
+          "correo": "alumno@undc.edu.pe",
+          "fecha": "2023-10-09",
+          "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+          "nombre": "Carlos",
+          "tipoUsuario": "ESTUDIANTE"
+        },
+        "-NgMcxQom7x7j2gr_-0e": {
+          "accion": "Acceso a Mapa",
+          "correo": "alumno@undc.edu.pe",
+          "fecha": "2023-10-09",
+          "idUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+          "nombre": "Carlos",
+          "tipoUsuario": "ESTUDIANTE"
+        }
+      },
+      "Correo": "alumno@undc.edu.pe",
+      "IdUsuario": "4BeNsgl5ODQ9fgR1cGySfLFpqWK2",
+      "Nombre": "Carlos",
+      "TipoUsuario": "ESTUDIANTE"
+    },
+    "4rzbn1E2othMpPD8NIXRW9XOnk73": {
+      "Correo": "2002010059@undc.edu.pe",
+      "IdUsuario": "4rzbn1E2othMpPD8NIXRW9XOnk73",
+      "Nombre": "Nicole Alexandra Chuquispuma Vegas ",
+      "TipoUsuario": "ESTUDIANTE"
+    },
+    "57XSqSKpjiRTcyDuQ2diR6sseNV2": {
+      "Correo": "conductor@undc.edu.pe",
+      "IdUsuario": "57XSqSKpjiRTcyDuQ2diR6sseNV2",
+      "Nombre": "Marlon",
+      "TipoBus": "Bus A",
+      "TipoUsuario": "CONDUCTOR",
+      "compartiendoUbicacion": false,
+      "location": {
+        "latitude": -13.0710677,
+        "longitude": -76.2856781,
+        "rotation": 52.904361724853516
+      }
+    },
+    "BKHk28UxHBNAzYgj3Sk2XajaZsq2": {
+      "Correo": "197437763@undc.edu.pe",
+      "IdUsuario": "BKHk28UxHBNAzYgj3Sk2XajaZsq2",
+      "Nombre": "Shumira",
+      "TipoUsuario": "ESTUDIANTE"
+    },
+    "C6epdXTWHnN5UB8w9CInefhgYqu2": {
+      "Correo": "arivera@undc.edu.pe",
+      "IdUsuario": "C6epdXTWHnN5UB8w9CInefhgYqu2",
+      "Nombre": "sthalin",
+      "TipoUsuario": "ESTUDIANTE"
+    },
+    "KqiHue9iORVsBbEa0u8ux7cWDdP2": {
+      "Correo": "1670787001@undc.edu.pe",
+      "IdUsuario": "KqiHue9iORVsBbEa0u8ux7cWDdP2",
+      "Nombre": "Carlos",
+      "TipoBus": "Bus A",
+      "TipoUsuario": "CONDUCTOR",
+      "compartiendoUbicacion": true,
+      "location": {
+        "latitude": 14.6527444,
+        "longitude": 121.0358402,
+        "rotation": 0
+      }
+    },
+    "VA759dZMlBVBP2U1xPC9nNSuNMJ2": {
+      "Correo": "administrador@undc.edu.pe",
+      "IdUsuario": "VA759dZMlBVBP2U1xPC9nNSuNMJ2",
+      "Nombre": "Carlos",
+      "TipoUsuario": "ADMINISTRADOR"
+    },
+    "X4v7PyV48LWdw1jfE8WfxtcqlAg2": {
+      "Correo": "alumnoprueba@undc.edu.pe",
+      "IdUsuario": "X4v7PyV48LWdw1jfE8WfxtcqlAg2",
+      "Nombre": "prueba",
+      "TipoUsuario": "ESTUDIANTE"
+    },
+    "tvedHIbmlebH3jmjcJmSlY93ERM2": {
+      "Correo": "jpeves@undc.edu.pe",
+      "IdUsuario": "tvedHIbmlebH3jmjcJmSlY93ERM2",
+      "Nombre": "justino",
+      "TipoUsuario": "ADMINISTRATIVO"
+    },
+    "wIY4uMWzHCcYopxM2V2knYkvAVh1": {
+      "Correo": "conductor2@undc.edu.pe",
+      "IdUsuario": "wIY4uMWzHCcYopxM2V2knYkvAVh1",
+      "Nombre": "Alexander",
+      "TipoBus": "Bus B",
+      "TipoUsuario": "CONDUCTOR",
+      "compartiendoUbicacion": false,
+      "location": {
+        "latitude": -13.0453592,
+        "longitude": -76.4037461,
+        "rotation": 243.31700134277344
+      }
+    }
+  },
+  "version": "3"
+}
