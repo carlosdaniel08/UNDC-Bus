@@ -51,14 +51,47 @@ public class MainActivity extends AppCompatActivity {
     private TextView txtEnviarNotificaciones;
     private CardView cvMapa, cvRutas, cvNotifaciones;
     private DatabaseReference mDatabase;
-    private int nVersion, versionActual;
     private FirebaseUser currentUser;
     private DatabaseReference historialDatabase;
+    private int nVersion, versionActual;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Obtener la versión actual de la aplicación
+        try {
+            PackageInfo packageInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
+            versionActual = packageInfo.versionCode;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        DatabaseReference versionRef = FirebaseDatabase.getInstance().getReference("version");
+        versionRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    try {
+                        String versionString = dataSnapshot.getValue(String.class);
+                        nVersion = Integer.parseInt(versionString);
+                        verificarVersion();
+                    } catch (NumberFormatException e) {
+                        // Manejar la excepción si el valor no se puede convertir a un entero
+                        e.printStackTrace();
+                        Toast.makeText(MainActivity.this, "Error al obtener la versión de Firebase", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                // Manejar el error...
+                Toast.makeText(MainActivity.this, "Error al consultar Firebase", Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
         historialDatabase = FirebaseDatabase.getInstance().getReference("historial");
 
@@ -72,11 +105,7 @@ public class MainActivity extends AppCompatActivity {
         tvSaludo.setText(saludo);
         ImageView imageView = findViewById(R.id.imageView);
 
-
        mDatabase = FirebaseDatabase.getInstance().getReference("version");
-       VersionApp();
-
-
 
       if (isConnectedToInternet()) {
 
@@ -161,6 +190,33 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // Método para verificar la versión y mostrar diálogo de actualización
+    private void verificarVersion() {
+        if (nVersion > versionActual) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            builder.setTitle("Actualización Disponible");
+            builder.setMessage("Hay una nueva versión disponible. Por favor, actualiza la aplicación.");
+            builder.setPositiveButton("Actualizar", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("URL_DE_TU_APP_EN_PLAY_STORE"));
+                    startActivity(intent);
+                }
+            });
+            builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    finish();
+                }
+            });
+
+            // Verificar si la actividad aún está activa antes de mostrar el diálogo
+            if (!isFinishing()) {
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        }
+    }
+
+
     private void guardarHistorial(String accion) {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
@@ -190,53 +246,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void VersionApp() {
-
-        try {
-            PackageInfo packageInfo = this.getPackageManager().getPackageInfo(getPackageName(),0);
-            versionActual = packageInfo.versionCode;
-
-        } catch (PackageManager.NameNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-
-        mDatabase.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                nVersion = Integer.parseInt(snapshot.getValue().toString());
-            if(versionActual != nVersion){
-                ActualizarApp();
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-    }
-
-    private void ActualizarApp() {
-        new AlertDialog.Builder(this)
-                .setTitle("Actualización Requerida")
-                .setMessage("Hay una nueva versión disponible. Por favor, actualiza para continuar.")
-                .setPositiveButton("Actualizar", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        // Redirige al usuario a la página de la aplicación en la tienda de aplicaciones
-                        Intent intent = new Intent(Intent.ACTION_VIEW);
-                        intent.setData(Uri.parse("market://details?id=" + getPackageName()));
-                        startActivity(intent);
-                        finish();
-                    }
-                })
-                .setNegativeButton("Salir", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        finish();
-                    }
-                })
-                .setIcon(R.drawable.warning_color)
-                .show();
-    }
 
 
     private boolean isConnectedToInternet() {
