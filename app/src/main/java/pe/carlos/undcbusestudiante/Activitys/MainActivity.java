@@ -198,8 +198,13 @@ public class MainActivity extends AppCompatActivity {
             builder.setMessage("Hay una nueva versión disponible. Por favor, actualiza la aplicación.");
             builder.setPositiveButton("Actualizar", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int id) {
-                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("URL_DE_TU_APP_EN_PLAY_STORE"));
-                    startActivity(intent);
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=pe.carlos.undcbusestudiante"));
+                    if (intent.resolveActivity(getPackageManager()) != null) {
+                        startActivity(intent);
+                    } else {
+                        Toast.makeText(MainActivity.this, "No se encontró una aplicación para abrir el enlace", Toast.LENGTH_SHORT).show();
+                    }
+
                 }
             });
             builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
@@ -247,7 +252,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
     private boolean isConnectedToInternet() {
         ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         Network network = connectivityManager.getActiveNetwork();
@@ -274,8 +278,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private String obtenerSaludoSegunHora() {
-
-
 
         ImageView imageView = findViewById(R.id.imageView);
 
@@ -326,9 +328,6 @@ public class MainActivity extends AppCompatActivity {
                         } else {
                             tvTipoBus.setVisibility(View.GONE); // Ocultar el TextView si no hay información
                         }
-
-
-
                     }
                 }
 
@@ -348,10 +347,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
-
-
-
-
 
     private String obtenerFechaActual() {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
