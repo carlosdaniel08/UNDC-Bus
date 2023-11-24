@@ -268,29 +268,102 @@
                 android:text="DATOS DE UBICACIÓN"
                 android:textSize="11dp"/>
 
-            <TextView
-                android:id="@+id/tvTurno"
+            <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TURNO: M" />
+                android:stretchColumns="*">
 
-            <TextView
-                android:id="@+id/tvDistrito"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="DISTRITO: SAN VICENTE DE CAÑETE" />
+                <TableRow>
 
-            <TextView
-                android:id="@+id/tvProvincia"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="PROVINCIA: CAÑETE" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Turno:"
+                        android:gravity="center" />
 
-            <TextView
-                android:id="@+id/tvDepartamento"
+                    <TextView
+                        android:id="@+id/tvTurno"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+                </TableRow>
+
+            </TableLayout>
+
+            <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="DEPARTAMENTO: LIMA" />
+                android:stretchColumns="*">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Distrito:"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tvDistrito"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+                </TableRow>
+
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Provincia:"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tvProvincia"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+                </TableRow>
+
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Departamento:"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tvDepartamento"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+                </TableRow>
+
+            </TableLayout>
+
         </LinearLayout>
 
 
