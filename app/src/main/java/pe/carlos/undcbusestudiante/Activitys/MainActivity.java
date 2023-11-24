@@ -20,6 +20,7 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseUser currentUser;
     private DatabaseReference historialDatabase;
     private int nVersion, versionActual;
+    private Button btnPerfil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,6 +106,20 @@ public class MainActivity extends AppCompatActivity {
         String saludo = obtenerSaludoSegunHora();
         tvSaludo.setText(saludo);
         ImageView imageView = findViewById(R.id.imageView);
+        btnPerfil = findViewById(R.id.btnPerfil);
+        btnPerfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+                if (currentUser != null) {
+                    String userEmail = currentUser.getEmail();
+
+                    Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+                    intent.putExtra("USER_EMAIL", userEmail);
+                    startActivity(intent);
+                }
+            }
+        });
 
        mDatabase = FirebaseDatabase.getInstance().getReference("version");
 
@@ -221,7 +237,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
     private void guardarHistorial(String accion) {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
@@ -250,9 +265,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
-
     private boolean isConnectedToInternet() {
+
         ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         Network network = connectivityManager.getActiveNetwork();
 

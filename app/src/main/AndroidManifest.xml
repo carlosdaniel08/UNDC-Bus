@@ -17,7 +17,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.UndcBusEstudiante"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".Activitys.ProfileActivity"
+            android:exported="false" />
         <activity
             android:name=".Activitys.SendNotificationActivity"
             android:exported="false" />
@@ -27,7 +31,6 @@
             android:enabled="true"
             android:exported="false"
             android:foregroundServiceType="location" />
-
         <service
             android:name=".Service.Fcm"
             android:exported="false">
@@ -35,7 +38,6 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-
         <service android:name=".Service.SubscriptionService" />
 
         <activity
@@ -63,7 +65,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".Activitys.TrackBusActivity"
             android:exported="true" />
