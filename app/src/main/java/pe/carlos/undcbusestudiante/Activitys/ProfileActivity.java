@@ -21,7 +21,7 @@ import org.json.JSONObject;
 import pe.carlos.undcbusestudiante.R;
 
 public class ProfileActivity extends AppCompatActivity {
-    private TextView tvDNI, tvEmail, tvAlumno, tvCelular, tvCarrera, tvCiclo, tvTurno, tvDistrito, tvProvincia, tvDepartamento;
+    private TextView tvDNI, tvCodigo, tvEmail, tvAlumno, tvCelular, tvCarrera, tvCiclo, tvTurno, tvDistrito, tvProvincia, tvDepartamento;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -29,6 +29,7 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
         tvDNI = findViewById(R.id.tvDNI);
+        tvCodigo = findViewById(R.id.tvCodigo);
         tvEmail = findViewById(R.id.tvEmail);
         tvAlumno = findViewById(R.id.tvAlumno);
         tvCelular = findViewById(R.id.tvCelular);
@@ -45,7 +46,7 @@ public class ProfileActivity extends AppCompatActivity {
         // Verificar si el correo electrónico no es nulo o vacío
         if (userEmail != null && !userEmail.isEmpty()) {
             // URL de tu API
-            String apiUrl = "http://192.168.2.60/aplicacion/consulta.php?email=" + userEmail;
+            String apiUrl = "http://192.168.1.24/android_mysql/consulta.php?email=" + userEmail;
 
             // Crear una cola de solicitudes Volley
             RequestQueue queue = Volley.newRequestQueue(this);
@@ -59,6 +60,7 @@ public class ProfileActivity extends AppCompatActivity {
                             // Procesar la respuesta JSON
                             try {
                                 String dni = response.getString("DNI");
+                                String codigo = response.getString("CODIGO");
                                 String email = response.getString("EMAIL");
                                 String alumno = response.getString("ALUMNO");
                                 String celular = response.getString("CELULAR");
@@ -70,6 +72,7 @@ public class ProfileActivity extends AppCompatActivity {
                                 String departamento = response.getString("DEPARTAMENTO");
 
                                 tvDNI.setText(dni);
+                                tvCodigo.setText(codigo);
                                 tvEmail.setText(email);
                                 tvAlumno.setText(alumno);
                                 tvCelular.setText(celular);
