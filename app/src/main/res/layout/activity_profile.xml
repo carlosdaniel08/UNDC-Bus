@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/BackgroundVerde"
+        tools:context=".Activitys.ProfileActivity">
+
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvNombre"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Perfil"
+                android:fontFamily="@font/robotobold"
+                android:textColor="@color/Black"
+                android:textSize="25sp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginRight="30dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/boton_2"
+                android:fontFamily="@font/robotobold"
+                android:textColor="@color/White"
+                android:text="2023-2"
+                android:textSize="10dp">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvDNI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DNI: 61309417" />
+
+            <TextView
+                android:id="@+id/tvCodigo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CÓDIGO: 2101010248" />
+
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="EMAIL: 2101010248@undc.edu.pe" />
+
+            <TextView
+                android:id="@+id/tvAlumno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ALUMNO: ÑAUPARI NIETO DIANA JAZMIN" />
+
+            <TextView
+                android:id="@+id/tvCelular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CELULAR: 903110963" />
+
+            <TextView
+                android:id="@+id/tvCarrera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CARRERA: AGRONOMÍA" />
+
+            <TextView
+                android:id="@+id/tvCiclo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CICLO: VI" />
+
+            <TextView
+                android:id="@+id/tvTurno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TURNO: M" />
+
+            <TextView
+                android:id="@+id/tvDistrito"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DISTRITO: SAN VICENTE DE CAÑETE" />
+
+            <TextView
+                android:id="@+id/tvProvincia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PROVINCIA: CAÑETE" />
+
+            <TextView
+                android:id="@+id/tvDepartamento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DEPARTAMENTO: LIMA" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>
